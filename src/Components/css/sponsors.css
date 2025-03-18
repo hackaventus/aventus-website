@@ -1,0 +1,43 @@
+/* .sponsors img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+    
+} */
+
+.sponsors {
+    background-color: #101010; /* or any other background color you prefer */
+  }
+  
+  .sponsors img {
+    height: 150px; /* Adjust the height as needed */
+    width: 300px; /* Adjust the width as needed */
+    border-radius: 20px; /* This gives the images rounded edges */
+    object-fit: fill; /* This gives the images a square shape */
+  }
+  
+  /* Optional: Add some spacing between the images */
+  .sponsors .flex > div {
+    margin: 0;
+  }
+  
+  /* Optional: Add some hover effect */
+  .sponsors img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+@media screen and (max-width: 640px) {
+    .sponsors .container {
+      margin: 0;
+      justify-content: center;
+    }
+    .sponsors img{
+      width: 340px;
+    }
+    .mark{
+      justify-content: center;
+    }
+}
