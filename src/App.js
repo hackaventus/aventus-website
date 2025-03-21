@@ -1,3 +1,6 @@
+
+import CircleAnimation from "./Components/CircleAnimation";
+
 import React from "react";
 import Landing from "./Components/Landing";
 import Sponsors from "./Components/Sponsors";
@@ -20,6 +23,9 @@ function App() {
 
   return (
     <>
+      {/* Circle Animation as Background */}
+      <CircleAnimation />
+    
       {/*  <Nav /> */}
       <div className="conta">
         <div>
