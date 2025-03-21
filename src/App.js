@@ -29,7 +29,6 @@ function App() {
 
   return (
     <>
-      {/* Circle Animation as Background */}
       <CircleAnimation />
 
       {/*  <Nav /> */}
@@ -37,9 +36,6 @@ function App() {
         <div>
           <Landing />
         </div>
-        {/* <div>
-          <PrizePool />
-        </div> */}
         <div>
           <About />
         </div>
