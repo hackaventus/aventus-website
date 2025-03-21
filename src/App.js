@@ -1,4 +1,6 @@
-import React from "react";
+import CircleAnimation from "./Components/CircleAnimation";
+
+import React, { useEffect } from "react";
 import Landing from "./Components/Landing";
 import Sponsors from "./Components/Sponsors";
 import Tracks from "./Components/Tracks";
@@ -18,8 +20,18 @@ import ContactUs from "./Components/ContactUs";
 function App() {
   const images = [image1, image2, image3, image4, image5];
 
+  useEffect(() => {
+    document.body.style.cursor = "none";
+    return () => {
+      document.body.style.cursor = "default";
+    };
+  }, []);
+
   return (
     <>
+      {/* Circle Animation as Background */}
+      <CircleAnimation />
+
       {/*  <Nav /> */}
       <div className="conta">
         <div>
