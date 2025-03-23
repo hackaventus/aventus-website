@@ -44,6 +44,13 @@ function Landing2Page() {
 function App() {
   const images = [image1, image2, image3, image4, image5];
 
+  useEffect(() => {
+    document.body.style.cursor = "none";
+    return () => {
+      document.body.style.cursor = "default";
+    };
+  }, []);
+
   return (
     <Router>
       {/* Circle Animation as Background */}
