@@ -1,4 +1,4 @@
-import techmiyaLogo from '../images/techmiya_logo.jpeg'; // Assuming the image is inside `src/images`
+import techmiyaLogo from '../images/techmiya_logo.jpeg'; 
 
 
 
