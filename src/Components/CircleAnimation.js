@@ -6,7 +6,7 @@ const CircleAnimation = () => {
 
     useEffect(() => {
         const moveCircle = (event) => {
-            const x = event.clientX - 100; // Centering effect
+            const x = event.clientX - 100; 
             const y = event.clientY - 100;
             circleRef.current.style.transform = `translate(${x}px, ${y}px)`;
         };

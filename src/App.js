@@ -1,3 +1,6 @@
+
+import CircleAnimation from "./Components/CircleAnimation";
+
 import React from "react";
 import Landing from "./Components/Landing";
 import Sponsors from "./Components/Sponsors";
@@ -14,10 +17,6 @@ import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
-import CircleAnimation from "./Components/CircleAnimation";
-
-
-
 
 function App() {
   const images = [image1, image2, image3, image4, image5];
@@ -26,14 +25,32 @@ function App() {
     <>
       {/* Circle Animation as Background */}
       <CircleAnimation />
-
-      {/* Main Content */}
+    
+      {/*  <Nav /> */}
       <div className="conta">
-        <Landing />
-        <About />
-        <Tracks />
-        <Sponsors />
-
+        <div>
+          <Landing />
+        </div>
+        {/* <div>
+          <PrizePool />
+        </div> */}
+        <div>
+          <About />
+        </div>
+        <div>
+          <Tracks />
+        </div>
+        <div>
+          <Sponsors />
+        </div>
+        <div
+          className="individual"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        ></div>
         <div className="individual">
           <h1>Individual Sponsors</h1>
         </div>
@@ -41,6 +58,18 @@ function App() {
           <IndividualSponsor images={images} />
         </div>
 
+        {/* <div>
+                    <CommunityColab />
+                // </div> */}
+
+        <div
+          className="glimpse"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        ></div>
         <div className="glimpse">
           <h1>Winners of Aventus 2.0</h1>
         </div>
@@ -48,8 +77,17 @@ function App() {
           <Glimpse images={images} />
         </div>
 
-        <Faqs />
-
+        <div>
+          <Faqs />
+        </div>
+        <div
+          className="GrandJury"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        ></div>
         <div className="contact-map-container">
           <div className="contact-section">
             <ContactUs />
@@ -58,9 +96,15 @@ function App() {
             <Map />
           </div>
         </div>
+        {/* <div>
+                    <Footer />
+                </div> */}
       </div>
     </>
   );
+  //     </div>
+  //   </>
+  // );
 }
 
 export default App;
