@@ -1,9 +1,11 @@
-
-import CircleAnimation from "./Components/CircleAnimation";
-
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import CircleAnimation from "./Components/CircleAnimation"; // Added Circle Animation import
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
+import CircleAnimation from "./Components/CircleAnimation";
 import Landing from "./Components/Landing";
 import Landing2 from "./Components/AventusLanding";
 import Tracks from "./Components/Tracks";
@@ -25,7 +27,10 @@ function Landing2Page() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ width: "100vw", height: "100vh" }} onClick={() => navigate("/landing")}>
+    <div
+      style={{ width: "100vw", height: "100vh" }}
+      onClick={() => navigate("/landing")}
+    >
       <Landing2 />
     </div>
   );
@@ -37,8 +42,7 @@ function App() {
   return (
     <Router>
       {/* Circle Animation as Background */}
-      <CircleAnimation />  {/* This is the Circle Animation component */}
-
+      <CircleAnimation /> {/* This is the Circle Animation component */}
       <Routes>
         <Route path="/" element={<Landing2Page />} />
         <Route
@@ -49,7 +53,15 @@ function App() {
               <IndividualSponsor />
               <About />
               <Tracks />
-              <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "40px 0" }}>
+              <div
+                className="glimpse"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  margin: "40px 0",
+                }}
+              >
                 <h1>Winners of Aventus 2.0</h1>
               </div>
               <div style={{ padding: "20px" }}>
