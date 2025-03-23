@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -26,11 +26,16 @@ import "./Components/css/sponsors.css";
 function Landing2Page() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/landing");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  });
+
   return (
-    <div
-      style={{ width: "100vw", height: "100vh" }}
-      onClick={() => navigate("/landing")}
-    >
+    <div style={{ width: "100vw", height: "100vh" }}>
       <Landing2 />
     </div>
   );
