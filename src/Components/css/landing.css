@@ -29,7 +29,7 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  background: transparent;
+  background:transparent;
   padding: 2rem 0;
 }
 
@@ -437,6 +437,7 @@
 @media (max-width: 1024px) {
   .lcontent {
     width: 90%;
+    background: transparent;
   }
   
   .event-title h1 {
@@ -454,6 +455,7 @@
 
 @media (max-width: 768px) {
   .lcontent {
+    background: transparent;
     flex-direction: column;
     padding-top: 2rem;
     gap: 2rem;
@@ -507,6 +509,7 @@
 
 @media (max-width: 480px) {
   .lcontent {
+    background: transparent;
     width: 95%;
     padding-top: 1rem;
   }
@@ -562,6 +565,7 @@
 /* Add this if PrizePool needs to be above the background */
 #landing-main > div {
   position: relative;
+  background: transparent;
   z-index: 1;
 }
 

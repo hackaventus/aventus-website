@@ -1,6 +1,6 @@
-
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import CircleAnimation from "./Components/CircleAnimation";
 import Landing from "./Components/Landing";
 import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
@@ -22,12 +22,11 @@ function AventusLandingPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Auto-redirect to the secondary page after 10 seconds
+    // Auto-redirect to the content page after 5 seconds
     const timer = setTimeout(() => {
       navigate("/content");
-    }, 5000); // 10 seconds
+    }, 5000);
 
-    // Clear the timeout if the component unmounts
     return () => clearTimeout(timer);
   }, [navigate]);
 
@@ -36,53 +35,66 @@ function AventusLandingPage() {
       style={{ width: "100vw", height: "100vh" }} 
       onClick={() => navigate("/content")}
     >
+      <CircleAnimation />
       <Landing2 />
     </div>
   );
 }
 
-function App() {
+function MainContent() {
   const images = [image1, image2, image3, image4, image5];
 
+  useEffect(() => {
+    // Hide cursor on load
+    document.body.style.cursor = "none";
+    
+    return () => {
+      document.body.style.cursor = "default"; // Reset cursor on unmount
+    };
+  }, []);
+
+  return (
+    <>
+      <CircleAnimation />
+      <div className="conta" style={{ background: "transparent" }}>
+        <Landing />
+        <About />
+        <Tracks />
+        <Sponsors />
+
+        <div className="individual" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        </div>
+        <div style={{ padding: "20px" }}>
+          <IndividualSponsor images={images} />
+        </div>
+
+        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h1>Winners of Aventus 2.0</h1>
+        </div>
+        <div style={{ padding: "20px" }}>
+          <Glimpse images={images} />
+        </div>
+
+        <Faqs />
+        <div className="contact-map-container">
+          <div className="contact-section">
+            <ContactUs />
+          </div>
+          <div className="map">
+            <Map />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function App() {
   return (
     <Router>
       <Routes>
-        {/* AventusLanding (Landing2) is the main landing page */}
         <Route path="/" element={<AventusLandingPage />} />
-        
-        {/* This is the content page that appears after 10 seconds */}
-        <Route
-          path="/content"
-          element={
-            <div className="conta">
-              <Landing />
-              <About />
-              <Tracks />
-              <Sponsors />
-              <div className="individual" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <h1>Individual Sponsors</h1>
-              </div>
-              <div style={{ padding: "20px" }}>
-                <IndividualSponsor images={images} />
-              </div>
-              <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <h1>Winners of Aventus 2.0</h1>
-              </div>
-              <div style={{ padding: "20px" }}>
-                <Glimpse images={images} />
-              </div>
-              <Faqs />
-              <div className="contact-map-container">
-                <div className="contact-section">
-                  <ContactUs />
-                </div>
-                <div className="map">
-                  <Map />
-                </div>
-              </div>
-            </div>
-          }
-        />
+        <Route path="/content" element={<MainContent />} />
       </Routes>
     </Router>
   );

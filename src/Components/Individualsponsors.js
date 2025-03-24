@@ -1,65 +1,85 @@
-import React from "react";
+import techmiyaLogo from "../images/techmiya_logo.jpeg";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./css/mentor style.css";
-
+import "./css/sponsors.css";
+import { swarmBackground } from "threejs-toys";
 
 function IndividualSponsors() {
+  useEffect(() => {
+    const existingEffect = document.getElementById("effect");
+    if (existingEffect) existingEffect.remove();
 
+    const effect = document.createElement("div");
+    effect.id = "effect";
+    document.body.prepend(effect);
+
+    effect.style.position = "fixed";
+    effect.style.top = "0";
+    effect.style.left = "0";
+    effect.style.width = "100vw";
+    effect.style.height = "100vh";
+    effect.style.zIndex = "-1";
+
+    const bg = swarmBackground({
+      el: effect,
+      eventsEl: effect,
+      gpgpuSize: 28,
+      color: [0x00a69e, 0x00a69e],
+      geometry: "default",
+    });
+
+    bg.setColors([0x00a69e, 0x00ff51]);
+    bg.three.camera.position.set(1, 0, 80);
+
+    const handleResize = () => {
+      if (bg && bg.three && bg.three.renderer) {
+        bg.three.renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      effect.remove();
+    };
+  }, []);
 
   const settings = {
     dots: true,
-    infinite: false,
-    // speed: 500,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
-      {
-        breakpoint: 1024, // Screen size less than or equal to 1024px
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768, // Screen size less than or equal to 768px
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640, // Screen size less than or equal to 640px
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1 } },
     ],
   };
 
   return (
-    <div className="w-3/5 m-auto">
-      <div className="mt-20">
-        <Slider {...settings}>
-          {data.map((d) => (
-            <div key={d.name} className="bg-black h-[500px] text-black rounded-xl" style={{ border: "solid 2px black" }}>
-              <div className={`h-56 flex justify-center items-center rounded-t-xl bgimg ${d.bg}`}>
-                <img src={d.img} alt="" className="h-44 w-44 rounded-full" style={{ border: "solid 2px white"}}/>
+    <div id="sponsors-main" className="relative flex justify-center items-center py-8 min-h-screen">
+      <div className="sponsors-wrapper w-2/3 lg:w-1/2 bg-[rgba(1,40,1,0.95)] p-4 rounded-2xl border border-[rgba(255,255,255,0.08)] shadow-md hover:shadow-lg overflow-y-auto">
+        <h2 className="text-center text-5xl font-bold text-white mb-8">Our Proud Sponsors</h2>
+        <div className="sponsors-inner bg-[rgba(1,40,1,0.95)] p-4 rounded-lg border-[rgba(255,255,255,0.08)] shadow-md hover:shadow-lg">
+          {data.map((d, index) => (
+            <div key={index} className="bg-[rgba(1,40,1,0.95)] rounded-xl sponsors">
+              <div className="h-48 flex justify-center items-center rounded-t-xl bgimg">
+                <img src={d.img} alt={d.name} className="sponsors-img max-h-full object-contain" />
               </div>
-              <div className="flex flex-col items-center  text-green-800 justify-center gap-6 p-4">
-                <p className="text-xl font-semibold text-center">{d.name}</p>
-                <p className="text-center">{d.description}</p>
-                <p className="text-center">{d.price}</p>
-                <button className="bg-green-800 text-black text-lg px-6 py-1 rounded-xl">
-                  <a href={d.linkedin} target="_blank" rel="noopener noreferrer">linkedin profile</a>
-                </button>
-                
+              <div className="flex flex-col items-center justify-center gap-3 p-3 mark">
+                <p className="text-2xl font-bold text-white">{d.name}</p>
+                <p className="text-white text-sm mt-4 text-center">{d.description}</p>
+                <div className="flex flex-wrap gap-6 mt-6 justify-center">
+                  <a href={d.website} target="_blank" rel="noopener noreferrer" className="bg-green-800 text-white text-lg px-6 py-3 rounded-full hover:bg-green-700 transition-all duration-300">Website</a>
+                  <a href={d.linkedin} target="_blank" rel="noopener noreferrer" className="bg-green-800 text-white text-lg px-6 py-3 rounded-full hover:bg-green-700 transition-all duration-300">LinkedIn</a>
+                  <a href={d.instagram} target="_blank" rel="noopener noreferrer" className="bg-green-800 text-white text-lg px-6 py-3 rounded-full hover:bg-green-700 transition-all duration-300">Instagram</a>
+                </div>
               </div>
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
     </div>
   );
@@ -67,14 +87,13 @@ function IndividualSponsors() {
 
 const data = [
   {
-    name: "Vishnu Prabhu",
-    img: "IS1.png",
-    description: "Sponsor",
-    price: "₹ 30,000",
-    linkedin: "https://www.linkedin.com/in/vishnuprabhu?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    bg: "aventus_bimg",
+    name: "Techmiya Solutions",
+    img: techmiyaLogo,
+    description: "Techmiya Solutions is a cutting-edge R&D company specializing in AI, ML, and Full Stack Development.",
+    website: "https://techmiyasolutions.com",
+    linkedin: "https://www.linkedin.com/company/techmiyaprojects/posts/?feedView=all",
+    instagram: "https://www.instagram.com/techmiyaprojects",
   },
-  
 ];
 
 export default IndividualSponsors;
