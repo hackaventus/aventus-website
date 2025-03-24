@@ -65,7 +65,8 @@ function Landing() {
       {/* Added a navbar-spacer div */}
       {/* <div className="navbar-spacer"></div> */}
 
-      <div className="lcontent">
+      <div className="lcontent" style={{ background: "transparent" }}>
+
         <div className="lleft" data-aos="fade-right" data-aos-delay="200">
           <div className="event-title">
             <h1>
@@ -170,6 +171,7 @@ function Landing() {
           <span> Brought to you by </span>
           <h2>Dayananda Sagar College of Engineering</h2>
           <h3>Department of Artificial Intelligence & Machine Learning</h3>
+          <h4>Powered by Techmiya Solution</h4>
         </div>
       </div>
 
