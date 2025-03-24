@@ -1,11 +1,10 @@
-
 import React, { useEffect, useRef, useState } from 'react';
-import './css/AventusStyles.css'
+import './css/AventusStyles.css';
+
 /**
  * Enhanced Text Animations for Aventus 3.0 Landing Page
  * This component adds advanced animations to the existing landing page
  */
-
 const EnhancedAventusLanding = () => {
   const canvasRef = useRef(null);
   const animationRef = useRef(null);

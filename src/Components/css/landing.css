@@ -565,3 +565,18 @@
   z-index: 1;
 }
 
+/* Background Effect */
+#effect {
+  position: fixed;  /* Ensure it covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of screen */
+  height: 100vh; /* Full height of screen */
+  z-index: -1; /* Keeps it behind content */
+  background-color: transparent;
+  pointer-events: none;
+}
+
+#effect canvas {
+  border-radius: 0; /* Remove any unwanted rounding */
+}
