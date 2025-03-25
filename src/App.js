@@ -56,14 +56,13 @@ function MainContent() {
       <div className="conta" style={{ background: "transparent" }}>
         <Landing />
         <About />
-        <Tracks />
-        <Sponsors />
-
         <div className="individual" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         </div>
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
+        <Tracks />
+        <Sponsors />
 
         <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h1>Winners of Aventus 2.0</h1>
