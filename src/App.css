@@ -1,71 +1,12 @@
-/* General Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #121212;
-  color: #ffffff;
-  overflow-x: hidden;
-}
-
-/* Container */
-.conta {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-  overflow-x: hidden;
-}
-
-/* Circle Animation - Positioned in the Background */
-.circle-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1; /* Ensures it stays in the background */
-  pointer-events: none; /* Prevents interaction */
-}
-
-/* Heading Styles */
-h1 {
+.ps h1 {
   color: #f0f0f0;
   font-size: 2.5rem;
+  align-items: center;
   text-align: center;
   margin-top: 100px;
   font-family: 'Roboto', sans-serif;
 }
 
-/* Section Titles */
-.ps h1,
-.glimpse h1,
-.mentors h1,
-.judges h1,
-.GrandJury h1,
-.individual h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 150px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.mentors h1 {
-  color: #009688;
-}
-
-.judges h1 {
-  color: #e91e63;
-}
-
-.GrandJury h1 {
-  color: #ffeb3b;
-}
-
-.individual h1 {
-  color: #f0f0f0;
-}
-
-/* Timeline */
 .timeline h6 {
   color: #8bc34a;
   font-size: 1.2rem;
@@ -74,41 +15,122 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Map Section */
+.glimpse h1 {
+  color: #f0f0f0;
+  font-size: 2.5rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mentors h1 {
+  color: #009688;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 150px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.judges h1 {
+  margin-top: 150px;
+  color: #e91e63;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.GrandJury h1 {
+  margin-top: 150px;
+  color: #ffeb3b;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.individual h1 {
+  margin-top: 150px;
+  color: #f0f0f0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
 .map {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
+  background: transparent;
   position: relative;
   z-index: 2;
 }
 
 .map h1 {
+  margin-top: 0;
   color: #f0f0f0;
-  text-align: center;
-  margin-bottom: 2rem;
   font-size: 2.5rem;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2rem;
 }
 
-/* Contact & Map Section */
+.swarmBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.conta {
+  overflow-x: hidden;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.conta > div {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.answer {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+}
+
+.contact-venue-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 2rem;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
 .contact-map-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
+  background: transparent;
+  position: relative;
+  z-index: 1;
   gap: 2rem;
   width: 100%;
-  position: relative;
-  z-index: 2;
 }
 
-.contact-map-container .contact-section,
+.contact-map-container .contact-section {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
 .contact-map-container .map {
   flex: 1;
   min-width: 0;
 }
 
-/* Map Container */
 .map-container {
   width: 100%;
   height: 400px;
@@ -123,36 +145,21 @@ h1 {
   border: none;
 }
 
-/* Swarm Background */
-.swarmBackground {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Answer Section */
-.answer {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 500;
-}
-
-/* Contact Venue */
-.contact-venue-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background: transparent;
-  position: relative;
-  z-index: 2;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .contact-venue-container {
     flex-direction: column;
     padding: 2rem 1rem;
     gap: 1rem;
   }
+  
+.conta {
+  background: transparent;
+}
+
+.conta > div {
+  position: relative;
+  background: transparent;
+}
 
   .contact-map-container {
     flex-direction: column;
@@ -161,7 +168,10 @@ h1 {
   }
 
   .contact-map-container .contact-section {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+  .contact-map-container .map {
+    padding: 1rem;
   }
 }
 

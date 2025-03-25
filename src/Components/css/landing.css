@@ -29,7 +29,7 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  background: transparent;
+  background:transparent;
   padding: 2rem 0;
 }
 
@@ -207,7 +207,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   color: var(--accent-color);
-  margin-left: 1.2rem;
+  margin-left: 0.75rem;
 }
 
 /* Action Buttons */
@@ -437,6 +437,7 @@
 @media (max-width: 1024px) {
   .lcontent {
     width: 90%;
+    background: transparent;
   }
   
   .event-title h1 {
@@ -454,6 +455,7 @@
 
 @media (max-width: 768px) {
   .lcontent {
+    background: transparent;
     flex-direction: column;
     padding-top: 2rem;
     gap: 2rem;
@@ -507,6 +509,7 @@
 
 @media (max-width: 480px) {
   .lcontent {
+    background: transparent;
     width: 95%;
     padding-top: 1rem;
   }
@@ -562,21 +565,7 @@
 /* Add this if PrizePool needs to be above the background */
 #landing-main > div {
   position: relative;
+  background: transparent;
   z-index: 1;
 }
 
-/* Background Effect */
-#effect {
-  position: fixed;  /* Ensure it covers the entire viewport */
-  top: 0;
-  left: 0;
-  width: 100vw; /* Full width of screen */
-  height: 100vh; /* Full height of screen */
-  z-index: -1; /* Keeps it behind content */
-  background-color: transparent;
-  pointer-events: none;
-}
-
-#effect canvas {
-  border-radius: 0; /* Remove any unwanted rounding */
-}

@@ -1,0 +1,367 @@
+/* Base Styles (adapted from original) */
+.aventus-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Pure black background */
+    color: white;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  }
+  
+  .background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .content {
+    z-index: 2;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Main title base styles */
+  #title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    color: #FFFFFF; /* White color for AVENTUS */
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-green {
+    color: #00FF3C; /* Bright neon green for 3.0 */
+  }
+  
+  .coming-soon {
+    font-size: 1.8rem;
+    color: #00FF3C; /* Bright neon green */
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title-space, .letra-sub-space {
+    display: inline-block;
+    width: 0.5em;
+  }
+  
+  /* 1. CHARACTER BY CHARACTER APPEARANCE ANIMATION */
+  .letra, .letra-sub {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    position: relative;
+  }
+  
+  .letra {
+    animation: letterAppear 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+  }
+  
+  .letra-sub {
+    animation: letterAppear 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+    animation-delay: 1.2s; /* Start after title animation */
+  }
+  
+  /* Staggered delay for each letter */
+  .letra:nth-child(1) { animation-delay: 0.5s; }
+  .letra:nth-child(2) { animation-delay: 0.6s; }
+  .letra:nth-child(3) { animation-delay: 0.7s; }
+  .letra:nth-child(4) { animation-delay: 0.8s; }
+  .letra:nth-child(5) { animation-delay: 0.9s; }
+  .letra:nth-child(6) { animation-delay: 1.0s; }
+  .letra:nth-child(7) { animation-delay: 1.1s; }
+  .letra:nth-child(9) { animation-delay: 1.3s; }  /* 3 */
+  .letra:nth-child(10) { animation-delay: 1.4s; } /* . */
+  .letra:nth-child(11) { animation-delay: 1.5s; } /* 0 */
+  
+  .letra-sub:nth-child(1) { animation-delay: 1.7s; }
+  .letra-sub:nth-child(2) { animation-delay: 1.8s; }
+  .letra-sub:nth-child(3) { animation-delay: 1.9s; }
+  .letra-sub:nth-child(4) { animation-delay: 2.0s; }
+  .letra-sub:nth-child(5) { animation-delay: 2.1s; }
+  .letra-sub:nth-child(6) { animation-delay: 2.2s; }
+  .letra-sub:nth-child(8) { animation-delay: 2.4s; }
+  .letra-sub:nth-child(9) { animation-delay: 2.5s; }
+  .letra-sub:nth-child(10) { animation-delay: 2.6s; }
+  .letra-sub:nth-child(11) { animation-delay: 2.7s; }
+  
+  @keyframes letterAppear {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* 2. GLOW PULSE ANIMATION */
+  .letra, .letra-sub {
+    text-shadow: 0 0 8px rgba(0, 255, 60, 0.5);
+    animation-name: letterAppear, glowPulse;
+    animation-duration: 0.5s, 3s;
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28), ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, none;
+    animation-delay: var(--delay, 0.5s), 3s; /* Start pulsing after all letters appear */
+  }
+  
+  .title-green {
+    animation-name: letterAppear, greenGlowPulse;
+    animation-duration: 0.5s, 3s;
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28), ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, none;
+    animation-delay: var(--delay, 1.3s), 3s;
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      text-shadow: 0 0 5px rgba(0, 255, 60, 0.5), 0 0 10px rgba(0, 255, 60, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(0, 255, 60, 0.8), 0 0 30px rgba(0, 255, 60, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(0, 255, 60, 0.5), 0 0 10px rgba(0, 255, 60, 0.3);
+    }
+  }
+  
+  @keyframes greenGlowPulse {
+    0% {
+      text-shadow: 0 0 5px rgba(0, 255, 60, 0.5), 0 0 10px rgba(0, 255, 60, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(0, 255, 60, 0.9), 0 0 30px rgba(0, 255, 60, 0.7), 0 0 40px rgba(0, 255, 60, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(0, 255, 60, 0.5), 0 0 10px rgba(0, 255, 60, 0.3);
+    }
+  }
+  
+  /* 3. SCAN LINE EFFECT */
+  .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 60, 0.8), transparent);
+    z-index: 10;
+    opacity: 0;
+    animation: scanLine 6s linear infinite;
+    animation-delay: 3s; /* Start after text appears */
+  }
+  
+  @keyframes scanLine {
+    0% {
+      top: -10%;
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    80% {
+      opacity: 0.8;
+    }
+    100% {
+      top: 110%;
+      opacity: 0;
+    }
+  }
+  
+  /* 4. GLITCH EFFECT */
+  .title-animate::before,
+  .title-animate::after {
+    content: 'AVENTUS 3.0';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  
+  .title-animate::before {
+    color: #0FF;
+    z-index: -1;
+    animation: glitchText 4s infinite alternate;
+    animation-delay: 4s; /* Start after initial animations */
+  }
+  
+  .title-animate::after {
+    color: #F0F;
+    z-index: -2;
+    animation: glitchText 3s infinite alternate-reverse;
+    animation-delay: 4s; /* Start after initial animations */
+  }
+  
+  @keyframes glitchText {
+    0% {
+      opacity: 0;
+      transform: translate(-2px, 2px);
+    }
+    1% {
+      opacity: 0.8;
+    }
+    2% {
+      opacity: 0;
+      transform: translate(2px, -2px);
+    }
+    3% {
+      opacity: 0;
+    }
+    4% {
+      opacity: 0.8;
+      transform: translate(0px, 0px) skew(10deg);
+    }
+    5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* 5. DIGITAL OVERLAY */
+  .glitch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 255, 60, 0.05) 50%, transparent 51%, rgba(0, 255, 60, 0.05));
+    background-size: 100% 4px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    animation: overlayFadeIn 2s forwards;
+    animation-delay: 3.5s; /* After text appears */
+  }
+  
+  @keyframes overlayFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.2;
+    }
+  }
+  
+  /* 6. FUTURISTIC DATA BLOCKS */
+  .data-block {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: rgba(0, 255, 60, 0.05);
+    border: 1px solid rgba(0, 255, 60, 0.3);
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .data-block.left {
+    left: -120px;
+    animation: dataBlockAppear 2s forwards, dataBlockPulse 4s infinite;
+    animation-delay: 4s, 6s; /* After text appears */
+  }
+  
+  .data-block.right {
+    right: -120px;
+    animation: dataBlockAppear 2s forwards, dataBlockPulse 4s infinite;
+    animation-delay: 4.5s, 6.5s; /* Slightly offset from left block */
+  }
+  
+  @keyframes dataBlockAppear {
+    from {
+      opacity: 0;
+      transform: translateY(-50%) translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+  }
+  
+  @keyframes dataBlockPulse {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 255, 60, 0.3);
+      border-color: rgba(0, 255, 60, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(0, 255, 60, 0.7);
+      border-color: rgba(0, 255, 60, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 255, 60, 0.3);
+      border-color: rgba(0, 255, 60, 0.3);
+    }
+  }
+  
+  /* 7. HOVER EFFECTS (Interactive) */
+  .letra:hover, .letra-sub:hover {
+    animation: none;
+    transform: scale(1.2);
+    color: #00FF3C;
+    text-shadow: 0 0 20px rgba(0, 255, 60, 0.9), 0 0 30px rgba(0, 255, 60, 0.6);
+    transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #title {
+      font-size: 3rem;
+    }
+    
+    .coming-soon {
+      font-size: 1.4rem;
+    }
+    
+    .data-block {
+      width: 40px;
+      height: 30px;
+    }
+    
+    .data-block.left {
+      left: -80px;
+    }
+    
+    .data-block.right {
+      right: -80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #title {
+      font-size: 2.5rem;
+    }
+    
+    .coming-soon {
+      font-size: 1.2rem;
+    }
+    
+    .data-block {
+      display: none; /* Hide data blocks on very small screens */
+    }
+  }

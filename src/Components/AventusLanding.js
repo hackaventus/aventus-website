@@ -1,16 +1,19 @@
 
-import React, { useEffect, useRef } from 'react';
 
+import React, { useEffect, useRef, useState } from 'react';
+import './css/AventusStyles.css'
 /**
- * Aventus 3.0 Landing Page Animation as a React Component
- * With colors matched to the reference design (black background and bright green)
+ * Enhanced Text Animations for Aventus 3.0 Landing Page
+ * This component adds advanced animations to the existing landing page
  */
-const AventusLanding = () => {
+
+const EnhancedAventusLanding = () => {
   const canvasRef = useRef(null);
   const animationRef = useRef(null);
+  const [textLoaded, setTextLoaded] = useState(false);
   
   useEffect(() => {
-    // Initialize everything when component mounts
+    // All the original canvas animation code remains the same
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     
@@ -39,7 +42,7 @@ const AventusLanding = () => {
       return `rgba(0, 230, 220, ${opacity})`; // Teal accent from reference
     };
     
-    // Initialize the scene
+    // Initialize the scene (original code)
     const initScene = () => {
       // Create particles
       for (let i = 0; i < 30; i++) {
@@ -82,7 +85,7 @@ const AventusLanding = () => {
       }
     };
     
-    // Create a flash at random position
+    // Create a flash at random position (original code)
     const createFlash = () => {
       flashes.push({
         x: Math.random() * canvas.width,
@@ -97,7 +100,7 @@ const AventusLanding = () => {
       setTimeout(createFlash, Math.random() * 3000 + 1000);
     };
     
-    // Animation function
+    // Animation function (original code)
     const animate = () => {
       // Clear canvas with slight trail effect for particles
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Black background with slight opacity for trails
@@ -206,16 +209,6 @@ const AventusLanding = () => {
         }
       }
       
-      // Animate text
-      const title = document.getElementById('title');
-      const subtitle = document.getElementById('subtitle');
-      
-      if (title && subtitle) {
-        const time = Date.now();
-        title.style.textShadow = `0 0 ${10 + Math.sin(time * 0.001) * 5}px rgba(0, 255, 60, ${0.7 + Math.sin(time * 0.002) * 0.3})`; // Neon green glow
-        subtitle.style.opacity = 0.7 + Math.sin(time * 0.003) * 0.3;
-      }
-      
       // Continue animation
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -224,6 +217,11 @@ const AventusLanding = () => {
     initScene();
     animate();
     setTimeout(createFlash, 1000);
+    
+    // Show text elements after canvas is initialized
+    setTimeout(() => {
+      setTextLoaded(true);
+    }, 500);
     
     // Cleanup on component unmount
     return () => {
@@ -241,90 +239,50 @@ const AventusLanding = () => {
         className="background-canvas" 
       />
       
-      <div className="content">
-        <h1 id="title">AVENTUS <span className="title-green">3.0</span></h1>
-        <div id="subtitle" className="coming-soon">COMING SOON</div>
+      <div className={`content ${textLoaded ? 'visible' : ''}`}>
+        {/* Split AVENTUS into individual letters for letter-by-letter animation */}
+        <h1 id="title" className="title-animate">
+          <span className="letra">A</span>
+          <span className="letra">V</span>
+          <span className="letra">E</span>
+          <span className="letra">N</span>
+          <span className="letra">T</span>
+          <span className="letra">U</span>
+          <span className="letra">S</span>
+          <span className="title-space"> </span>
+          <span className="title-green letra">3</span>
+          <span className="title-green letra">.</span>
+          <span className="title-green letra">0</span>
+        </h1>
+        <br></br>
+        
+        {/* Split COMING SOON into individual characters */}
+        <div id="subtitle" className="coming-soon">
+          <span className="letra-sub">C</span>
+          <span className="letra-sub">O</span>
+          <span className="letra-sub">M</span>
+          <span className="letra-sub">I</span>
+          <span className="letra-sub">N</span>
+          <span className="letra-sub">G</span>
+          <span className="letra-sub-space"> </span>
+          <span className="letra-sub">S</span>
+          <span className="letra-sub">O</span>
+          <span className="letra-sub">O</span>
+          <span className="letra-sub">N</span>
+        </div>
+        
+        {/* Scanning line effect */}
+        <div className="scan-line"></div>
+        
+        {/* Digital glitch overlays */}
+        <div className="glitch-overlay"></div>
+        
+        {/* Futuristic data blocks */}
+        <div className="data-block left"></div>
+        <div className="data-block right"></div>
       </div>
     </div>
   );
 };
 
-/**
- * Styles for the Aventus Landing component
- */
-const AventusStyles = () => {
-  return (
-    <style jsx>{`
-      .aventus-container {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #000000; /* Pure black background */
-        color: white;
-      }
-      
-      .background-canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-      }
-      
-      .content {
-        z-index: 2;
-        text-align: center;
-        position: relative;
-      }
-      
-      #title {
-        font-size: 4rem;
-        letter-spacing: 3px;
-        margin-bottom: 1rem;
-        color: #FFFFFF; /* White color for AVENTUS */
-        text-shadow: 0 0 10px rgba(0, 255, 60, 0.8); /* Neon green glow */
-      }
-      
-      .title-green {
-        color: #00FF3C; /* Bright neon green for 3.0 */
-      }
-      
-      .coming-soon {
-        font-size: 1.8rem;
-        color: #00FF3C; /* Bright neon green */
-        letter-spacing: 2px;
-        text-shadow: 0 0 8px rgba(0, 255, 60, 0.5); /* Neon green glow */
-      }
-      
-      @media (max-width: 768px) {
-        #title {
-          font-size: 3rem;
-        }
-        
-        .coming-soon {
-          font-size: 1.4rem;
-        }
-      }
-    `}</style>
-  );
-};
-
-/**
- * Aventus3Landing component that includes both the animation and styles
- */
-const Aventus3Landing = () => {
-  return (
-    <>
-      <AventusStyles />
-      <AventusLanding />
-    </>
-  );
-};
-
-export default Aventus3Landing;
+export default EnhancedAventusLanding;

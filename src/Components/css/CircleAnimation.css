@@ -1,13 +1,32 @@
+/* Default cursor (small dot) */
 .circle {
-    width: 200px;  
-    height: 200px;
-    background: radial-gradient(circle, rgba(0, 255, 0, 0.726) 0%, rgba(0,128,0,0.3) 100%);
-    border-radius: 30%;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(63, 196, 36);
     position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    filter: blur(50px);
-    transition: transform 0.1s ease-out; 
-    z-index: 3;
-}
+    pointer-events: none; /* Prevents blocking clicks */
+    border-radius: 50%;
+    transition: transform 0.05s linear, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+    mix-blend-mode: difference; /* Makes it visible on all backgrounds */
+    z-index: 9999; /* Keeps it on top of everything */
+  }
+  
+  /* Large animated cursor inside components */
+  .circle.large-cursor {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 255, 100, 0.8);
+  }
+  
+  /* Small dot effect when hovering over interactive elements */
+  .circle.small-dot {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+  }
+  @media (max-width: 950px) {
+    .circle{
+        display:none;
+    }
+  } 
+  

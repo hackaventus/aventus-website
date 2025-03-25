@@ -1,132 +1,45 @@
-/* Background Effect */
-#effect {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background-color: transparent;
-  pointer-events: none;
-}
+/* .sponsors img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+    
+} */
 
-#effect canvas {
-  border-radius: 0;
-}
+.sponsors {
+    background-color: #101010; 
+    display: relative;
+    /* or any other background color you prefer */
+  }
+  
+  .sponsors img {
+    height: 150px; /* Adjust the height as needed */
+    width: 300px; /* Adjust the width as needed */
+    border-radius: 20px; /* This gives the images rounded edges */
+    object-fit: fill; /* This gives the images a square shape */
+  }
+  
+  /* Optional: Add some spacing between the images */
+  .sponsors .flex > div {
+    margin: 0;
+  }
+  
+  /* Optional: Add some hover effect */
+  .sponsors img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
 
-/* Sponsors Outer Wrapper - Darker Green Glass Effect */
-.sponsors-wrapper {
-  max-width: 800px;
-  margin: auto;
-  background: linear-gradient(135deg, rgba(1, 40, 1, 0.95), rgba(2, 50, 2, 0.9));
-  padding: 20px;
-  border-radius: 15px;
-  border: 1px solid rgba(5, 85, 5, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(5, 85, 5, 0.4);
-  z-index: 1;
-  position: relative;
-  overflow: hidden;
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-/* Sponsors Inner Section - More Clarity */
-.sponsors-inner {
-  background: linear-gradient(135deg, rgba(1, 40, 1, 0.95), rgba(1, 40, 1, 0.95));
-  padding: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(4px) saturate(170%);
-  border: 1px solid rgba(5, 85, 5, 0.6);
-  box-shadow: 0 4px 14px rgba(5, 85, 5, 0.5);
-  position: relative;
-  z-index: 1;
-  min-height: 500px;
-}
-
-.sponsors img {
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 20px;
-  object-fit: cover;
-  opacity: 0.9;
-}
-
-/* Hover Effect */
-.sponsors img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 1;
-}
-
-.particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  pointer-events: none;
-  animation: float 20s infinite linear;
-}
-
-/* Slider customization */
-.slick-dots li button:before {
-  color: white !important;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #00a69e !important;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  color: #00a69e !important;
-}
-
-/* Responsive */
 @media screen and (max-width: 640px) {
-  .sponsors-wrapper {
-    width: 90%;
-  }
-  .sponsors img {
-    width: 340px;
-  }
-  .mark {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .sponsors img {
-    max-width: 200px;
-  }
-}
-
-/* sponsors.css */
-
-.sponsors-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Add custom scrollbar styling */
-.sponsors-wrapper::-webkit-scrollbar {
-  width: 8px;
-}
-
-.sponsors-wrapper::-webkit-scrollbar-track {
-  background: rgba(1, 40, 1, 0.95);
-  border-radius: 4px;
-}
-
-.sponsors-wrapper::-webkit-scrollbar-thumb {
-  background: rgba(0, 166, 158, 0.5);
-  border-radius: 4px;
-}
-
-.sponsors-wrapper::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 166, 158, 0.8);
+    .sponsors .container {
+      margin: 0;
+      justify-content: center;
+    }
+    .sponsors img{
+      width: 340px;
+    }
+    .mark{
+      justify-content: center;
+    }
 }
