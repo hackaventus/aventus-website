@@ -61,7 +61,7 @@ function MainContent() {
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
-        <Tracks />
+        // <Tracks />
         <Sponsors />
 
         <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
