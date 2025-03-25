@@ -26,6 +26,7 @@
     "react-slick": "^0.30.2",
     "react-three-fiber": "^6.0.13",
     "react-use-scroll-snap": "^0.0.4",
+    "scrollax": "^1.0.0",
     "slick-carousel": "^1.8.1",
     "three": "^0.149.0",
     "threejs-toys": "^0.0.8",
