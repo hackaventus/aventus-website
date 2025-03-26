@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./Components/Landing";
-import Landing2 from "./Components/AventusLanding.js";
+// import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
 import Tracks from "./Components/Tracks";
 import About from "./Components/About";
@@ -16,6 +16,7 @@ import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
+import NewAventusLanding from "./Components/NewAventusLanding";
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
@@ -81,19 +82,14 @@ function App() {
     // Auto-switch to main content after 5 seconds
     const timer = setTimeout(() => {
       setShowMainContent(true);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
-      <div
-        style={{ width: "100%", height: "100%" }}
-        onClick={() => setShowMainContent(true)}
-      >
-        {!showMainContent ? <Landing2 /> : <MainContent />}
-      </div>
+      {!showMainContent ? <NewAventusLanding /> : <MainContent />}
     </Router>
   );
 }
