@@ -3,7 +3,7 @@ import "./css/NewAventusLanding.css";
 
 const NewAventusLanding = () => {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-gradient-grid-green flex flex-col items-center justify-center px-4 py-8">
       <div className="w-full max-w-[250px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] mb-12 md:mb-16">
         <img
           src="aventus.gif"
