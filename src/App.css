@@ -58,7 +58,7 @@
 
 .map {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   background: transparent;
   position: relative;
   z-index: 2;
@@ -101,7 +101,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   background: transparent;
   position: relative;
   z-index: 2;
@@ -112,10 +112,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   background: transparent;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   gap: 2rem;
   width: 100%;
 }
@@ -123,6 +123,7 @@
 .contact-map-container .contact-section {
   flex: 1;
   min-width: 0;
+  display: flex;
 }
 
 .contact-map-container .map {
@@ -150,6 +151,15 @@
     padding: 2rem 1rem;
     gap: 1rem;
   }
+  
+.conta {
+  background: transparent;
+}
+
+.conta > div {
+  position: relative;
+  background: transparent;
+}
 
   .contact-map-container {
     flex-direction: column;
@@ -158,15 +168,18 @@
   }
 
   .contact-map-container .contact-section {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+  .contact-map-container .map {
+    padding: 1rem;
   }
 }
 
 /* Add these styles to your existing App.css */
-* {
+/* * {
   cursor: none !important;
 }
 
 a, button, input, select, textarea {
   cursor: none !important;
-}
+} */
