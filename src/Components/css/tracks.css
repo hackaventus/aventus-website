@@ -1,6 +1,6 @@
 /* Track-specific variables */
 #Tracks {
-  --primary-color: #058213;
+  --primary-color: #00ff2a;
   --secondary-color: #052e0b;
   --accent-color: #069114;
   --dark-bg: #0a0a0a;
@@ -42,17 +42,18 @@
 }
 
 .section-title {
-  color: #fff;
+  color: #ffffff;
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .section-title .highlight {
   color: var(--primary-color);
-  text-shadow: 0 0 10px rgba(5, 130, 19, 0.2);
+  text-shadow: 0 0 15px rgba(0, 255, 42, 0.4);
 }
 
 .section-underline {
@@ -218,28 +219,32 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 0.75rem;
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 .track h1 {
   color: var(--primary-color);
   font-size: 2rem;
   font-weight: 700;
-  text-shadow: 0 0 8px rgba(5, 130, 19, 0.2);
+  text-shadow: 0 0 10px rgba(0, 255, 42, 0.4), 0 0 20px rgba(0, 255, 42, 0.2);
   transition: all 0.3s ease;
   position: relative;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 1rem;
   line-height: 1.1;
+  font-family: 'Poppins', sans-serif;
 }
 
 .track-description {
-  font-size: 0.95rem;
-  color: #bbbdc0;
-  line-height: 1.5;
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
   text-align: left;
   margin-top: auto;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .track-time {
@@ -254,8 +259,8 @@
 }
 
 .track-item:hover h1 {
-  color: var(--accent-color);
-  text-shadow: 0 0 8px rgba(5, 130, 19, 0.15);
+  color: #00ff2a;
+  text-shadow: 0 0 15px rgba(0, 255, 42, 0.5), 0 0 25px rgba(0, 255, 42, 0.3);
 }
 
 @media (max-width: 1200px) {
@@ -323,3 +328,5 @@
     font-size: 1.75rem;
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap');
