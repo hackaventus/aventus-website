@@ -1,5 +1,7 @@
 import React from 'react'
 import Lottie from 'react-lottie'
+import './css/tracksAnimation.css'
+
 function TracksAnimation({animationData}) {
     const defaultOptions = {
         loop: true,
@@ -10,7 +12,9 @@ function TracksAnimation({animationData}) {
         }
       };
   return (
-    <Lottie options={defaultOptions} height={300} width={300} />
+    <div className="track-animation-container">
+      <Lottie options={defaultOptions} height={180} width={180} />
+    </div>
   )
 }
 
