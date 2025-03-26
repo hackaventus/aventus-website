@@ -16,30 +16,7 @@ import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
-import NewAventusLanding from './Components/NewAventusLanding';
-
-// function AventusLandingPage() {
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     // Auto-redirect to the content page after 5 seconds
-//     const timer = setTimeout(() => {
-//       navigate("/content");
-//     }, 5000);
-
-//     return () => clearTimeout(timer);
-//   }, [navigate]);
-
-//   return (
-//     <div 
-//       style={{ width: "100vw", height: "100vh" }} 
-//       onClick={() => navigate("/content")}
-//     >
-//       <CircleAnimation />
-//       <Landing2 />
-//     </div>
-//   );
-// }
+import NewAventusLanding from "./Components/NewAventusLanding";
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
@@ -105,18 +82,14 @@ function App() {
     // Auto-switch to main content after 5 seconds
     const timer = setTimeout(() => {
       setShowMainContent(true);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <Router>
-      <Routes>
-        {/* <Route path="/" element={<AventusLandingPage />} /> */}
-        <Route path="/content" element={<MainContent />} />
-        <Route path="/" element={<NewAventusLanding />} />
-      </Routes>
+      {!showMainContent ? <NewAventusLanding /> : <MainContent />}
     </Router>
   );
 }
