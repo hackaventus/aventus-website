@@ -64,7 +64,6 @@ const Tracks = () => {
               <div
                 key={index}
                 className="track-item"
-                onClick={() => window.open(track.url, "_blank")}
                 style={{
                   cursor: "pointer",
                   borderLeft: `3px solid ${track.color}`,
