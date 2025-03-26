@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import CircleAnimation from "./Components/CircleAnimation";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./Components/Landing";
 // import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
@@ -47,8 +46,8 @@ function MainContent() {
 
   useEffect(() => {
     // Hide cursor on load
-    document.body.style.cursor = "none";
-    
+    document.body.style.cursor = "default";
+
     return () => {
       document.body.style.cursor = "default"; // Reset cursor on unmount
     };
@@ -56,26 +55,35 @@ function MainContent() {
 
   return (
     <>
-      <CircleAnimation />
       <div className="conta" style={{ background: "transparent" }}>
         <Landing />
         <About />
-        <Tracks />
-        <Sponsors />
-
-        <div className="individual" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        </div>
+        <div
+          className="individual"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        ></div>
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
-
-        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        // <Tracks />
+        <Sponsors />
+        <div
+          className="glimpse"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <h1>Winners of Aventus 2.0</h1>
         </div>
         <div style={{ padding: "20px" }}>
           <Glimpse images={images} />
         </div>
-
         <Faqs />
         <div className="contact-map-container">
           <div className="contact-section">
@@ -91,6 +99,17 @@ function MainContent() {
 }
 
 function App() {
+  const [showMainContent, setShowMainContent] = useState(false);
+
+  useEffect(() => {
+    // Auto-switch to main content after 5 seconds
+    const timer = setTimeout(() => {
+      setShowMainContent(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
       <Routes>
