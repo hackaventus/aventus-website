@@ -2,20 +2,26 @@
   padding: 2.5rem;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
-  height: 100%;
+  min-height: 100vh; /* Ensures it takes full height */
   display: flex;
   align-items: center;
+  justify-content: center; /* Centers content */
+  flex-direction: column; /* Stacks items vertically */
 }
+
 .contact-content {
-  width: 100%;
+  width: 100%; /* Responsive width */
+  max-width: 480px; /* Prevents it from being too wide */
+  height : 480px;
   border: 3px solid #2ecc71; /* Green border */
-  padding: 3rem;
+  padding: 2rem; /* Reduced padding for better spacing */
   border-radius: 1rem;
   box-shadow: 0 10px 25px rgba(46, 204, 113, 0.3), 
               0 15px 35px rgba(46, 204, 113, 0.2), 
               0 5px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   transition: box-shadow 0.3s ease;
+  text-align: center; /* Centers text content */
 }
 
 .contact-content:hover {
@@ -26,27 +32,25 @@
 
 .contact-content h2 {
   color: #f0f0f0;
-  font-size: 2.5rem;
-  margin-bottom: 4rem;
-  text-align: center;
-  border-radius: 15px; /* Rounded corners */
-
+  font-size: 2rem;
+  margin-bottom: 2rem; /* Adjusted margin */
 }
 
 .contact-info {
-  margin-bottom: 6rem;
-
+  margin-bottom: 3rem;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  justify-content: center; /* Centers items */
+  flex-wrap: wrap; /* Allows wrapping for small screens */
+  margin-bottom: 1rem;
   color: #f0f0f0;
+  gap: 0.5rem; /* Adds spacing */
 }
 
 .contact-item i {
-  margin-right: 1rem;
   font-size: 1.5rem;
   color: #2ecc71;
 }
@@ -61,28 +65,24 @@
   color: #2ecc71;
 }
 
+/* Social Media Links */
 .social-links {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
   justify-content: center;
-  align-items: center;
-  gap: 3.0rem;
-  margin-top: 5rem;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .social-link {
   transition: all 0.3s ease;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  margin: 0 auto;
+  width: 3.5rem;
+  height: 3.5rem;
   border: 2px solid transparent;
 }
 
@@ -119,8 +119,15 @@
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
   filter: brightness(1.2);
 }
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact-section {
+    padding: 1.5rem;
+  }
+
+  .contact-content {
+    width: 95%;
     padding: 1.5rem;
   }
 
@@ -130,9 +137,17 @@
 
   .contact-item {
     font-size: 0.9rem;
+    text-align: center;
+    flex-direction: column; /* Stack items in small screens */
+  }
+
+  .social-links {
+    gap: 0.75rem; /* Reduce spacing */
   }
 
   .social-link {
-    font-size: 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
   }
 }
