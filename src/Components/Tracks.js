@@ -37,7 +37,7 @@ const Tracks = () => {
       icon: "fas fa-microchip",
     },
     {
-      title: "AI in Defense",
+      title: "AI in Defense and Disaster Response",
       description:
         "How can AI be a first responder? From disaster predictions to AI-powered rescue missions, build something that saves lives when it matters most!",
       color: "#06a819cc", // Reduced green intensity
@@ -90,7 +90,6 @@ const Tracks = () => {
                     ></i>
                   </div>
                   <div className="track-item-header">
-                    <div className="track-category">AI Track</div>
                     <h1>{track.title}</h1>
                   </div>
                   <div
