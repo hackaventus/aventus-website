@@ -1,25 +1,41 @@
 .contact-section {
-  padding: 2rem;
+  padding: 2.5rem;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
   height: 100%;
   display: flex;
   align-items: center;
 }
-
 .contact-content {
   width: 100%;
+  border: 3px solid #2ecc71; /* Green border */
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(46, 204, 113, 0.3), 
+              0 15px 35px rgba(46, 204, 113, 0.2), 
+              0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-content:hover {
+  box-shadow: 0 15px 35px rgba(46, 204, 113, 0.4), 
+              0 20px 45px rgba(46, 204, 113, 0.3),
+              0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .contact-content h2 {
   color: #f0f0f0;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
   text-align: center;
+  border-radius: 15px; /* Rounded corners */
+
 }
 
 .contact-info {
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
+
 }
 
 .contact-item {
@@ -46,27 +62,63 @@
 }
 
 .social-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap: 3.0rem;
+  margin-top: 5rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .social-link {
-  color: #f0f0f0;
-  font-size: 1.5rem;
   transition: all 0.3s ease;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  border: 2px solid transparent;
+}
+
+/* Instagram - Gradient color */
+.social-link:nth-child(1) {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  color: white;
+  border-color: #c13584;
+}
+
+/* LinkedIn - Solid blue */
+.social-link:nth-child(2) {
+  background: #0077B5;
+  color: white;
+  border-color: #0077B5;
+}
+
+/* Discord - Blurple */
+.social-link:nth-child(3) {
+  background: #5865F2;
+  color: white;
+  border-color: #5865F2;
+}
+
+/* Telegram - Blue */
+.social-link:nth-child(4) {
+  background: #229ED9;
+  color: white;
+  border-color: #229ED9;
 }
 
 .social-link:hover {
-  color: #00a69e;
-  transform: translateY(-3px);
-  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
 }
-
 @media (max-width: 768px) {
   .contact-section {
     padding: 1.5rem;
@@ -83,4 +135,4 @@
   .social-link {
     font-size: 1.25rem;
   }
-} 
+}
