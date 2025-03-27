@@ -90,7 +90,6 @@ const Tracks = () => {
                     ></i>
                   </div>
                   <div className="track-item-header">
-                    <div className="track-category">AI Track</div>
                     <h1>{track.title}</h1>
                   </div>
                   <div
