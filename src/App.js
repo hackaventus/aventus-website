@@ -56,7 +56,7 @@ function MainContent() {
             alignItems: "center",
           }}
         >
-          <h1>Winners of Aventus 2.0</h1>
+          <h1 className="winners-title">Winners of Aventus 2.0</h1>
         </div>
         <div style={{ padding: "20px" }}>
           <Glimpse images={images} />
@@ -95,3 +95,5 @@ function App() {
 }
 
 export default App;
+
+
