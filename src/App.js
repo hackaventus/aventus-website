@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./Components/Landing";
-import Landing2 from "./Components/AventusLanding.js";
+// import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
 import Tracks from "./Components/Tracks";
 import About from "./Components/About";
@@ -16,28 +16,7 @@ import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
-
-function AventusLandingPage() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Auto-redirect to the content page after 5 seconds
-    const timer = setTimeout(() => {
-      navigate("/content");
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [navigate]);
-
-  return (
-    <div 
-      style={{ width: "100vw", height: "100vh" }} 
-      onClick={() => navigate("/content")}
-    >
-      <Landing2 />
-    </div>
-  );
-}
+import NewAventusLanding from "./Components/NewAventusLanding";
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
@@ -45,7 +24,7 @@ function MainContent() {
   useEffect(() => {
     // Hide cursor on load
     document.body.style.cursor = "default";
-    
+
     return () => {
       document.body.style.cursor = "default"; // Reset cursor on unmount
     };
@@ -58,9 +37,11 @@ function MainContent() {
         <About />
         <div className="individual" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         </div>
-        <div style={{ padding: "10px" , marginTop: "20px"}}>
+        <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
+        // <Tracks />
+        <Sponsors />
 
         <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h1>Winners of Aventus 2.0</h1>
@@ -68,7 +49,6 @@ function MainContent() {
         <div style={{ padding: "20px" }}>
           <Glimpse images={images} />
         </div>
-
         <Faqs />
         <div className="contact-map-container">
           <div className="contact-section">
@@ -84,14 +64,24 @@ function MainContent() {
 }
 
 function App() {
+  const [showMainContent, setShowMainContent] = useState(false);
+
+  useEffect(() => {
+    // Auto-switch to main content after 5 seconds
+    const timer = setTimeout(() => {
+      setShowMainContent(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<AventusLandingPage />} />
-        <Route path="/content" element={<MainContent />} />
-      </Routes>
+      {!showMainContent ? <NewAventusLanding /> : <MainContent />}
     </Router>
   );
 }
 
 export default App;
+
+

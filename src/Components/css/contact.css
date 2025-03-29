@@ -1,38 +1,58 @@
 .contact-section {
-  padding: 2rem;
+  padding: 2.5rem;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
-  height: 100%;
+  min-height: 100vh; /* Ensures it takes full height */
   display: flex;
   align-items: center;
+  justify-content: center; /* Centers content */
+  flex-direction: column; /* Stacks items vertically */
 }
 
 .contact-content {
-  width: 100%;
+  width: 100%; /* Responsive width */
+  max-width: 480px; /* Prevents it from being too wide */
+  height : 480px;
+  border: 3px solid #2ecc71; /* Green border */
+  padding: 2rem; /* Reduced padding for better spacing */
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(46, 204, 113, 0.3), 
+              0 15px 35px rgba(46, 204, 113, 0.2), 
+              0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  text-align: center; /* Centers text content */
+}
+
+.contact-content:hover {
+  box-shadow: 0 15px 35px rgba(46, 204, 113, 0.4), 
+              0 20px 45px rgba(46, 204, 113, 0.3),
+              0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .contact-content h2 {
   color: #f0f0f0;
   font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-bottom: 2rem; /* Adjusted margin */
 }
 
 .contact-info {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
+  justify-content: center; /* Centers items */
+  flex-wrap: wrap; /* Allows wrapping for small screens */
+  margin-bottom: 1rem;
   color: #f0f0f0;
+  gap: 0.5rem; /* Adds spacing */
 }
 
 .contact-item i {
-  margin-right: 1rem;
   font-size: 1.5rem;
-  color: #00a69e;
+  color: #2ecc71;
 }
 
 .contact-link {
@@ -42,33 +62,72 @@
 }
 
 .contact-link:hover {
-  color: #00a69e;
+  color: #2ecc71;
 }
 
+/* Social Media Links */
 .social-links {
   display: flex;
+  flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
 .social-link {
-  color: #f0f0f0;
-  font-size: 1.5rem;
   transition: all 0.3s ease;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid transparent;
+}
+
+/* Instagram - Gradient color */
+.social-link:nth-child(1) {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  color: white;
+  border-color: #c13584;
+}
+
+/* LinkedIn - Solid blue */
+.social-link:nth-child(2) {
+  background: #0077B5;
+  color: white;
+  border-color: #0077B5;
+}
+
+/* Discord - Blurple */
+.social-link:nth-child(3) {
+  background: #5865F2;
+  color: white;
+  border-color: #5865F2;
+}
+
+/* Telegram - Blue */
+.social-link:nth-child(4) {
+  background: #229ED9;
+  color: white;
+  border-color: #229ED9;
 }
 
 .social-link:hover {
-  color: #00a69e;
-  transform: translateY(-3px);
-  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact-section {
+    padding: 1.5rem;
+  }
+
+  .contact-content {
+    width: 95%;
     padding: 1.5rem;
   }
 
@@ -78,9 +137,17 @@
 
   .contact-item {
     font-size: 0.9rem;
+    text-align: center;
+    flex-direction: column; /* Stack items in small screens */
+  }
+
+  .social-links {
+    gap: 0.75rem; /* Reduce spacing */
   }
 
   .social-link {
-    font-size: 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
   }
-} 
+}
