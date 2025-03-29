@@ -61,7 +61,7 @@ const IndividualSponsors = () => {
   return (
     <div id="sponsors-main" className="sponsors-container">
       <div className="sponsors-wrapper">
-        <h2 className="sponsors-title">Our Proud Sponsor</h2>
+        <h2 className="sponsors-title">Our Collaborator</h2>
 
         <div className="sponsors-inner">
           {data.map((d, index) => (

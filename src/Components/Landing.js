@@ -75,7 +75,7 @@ function Landing() {
             <div className="coming-soon-badge">Coming Soon</div>
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
-                where technology flourishes
+              Where AI Thrives and Technology Flourishes.
               </p>
               <p className="hashtag" data-aos="fade-up" data-aos-delay="600">
                 #wtf
@@ -90,10 +90,10 @@ function Landing() {
           >
             <div className="date-badge">
               <span className="date-icon">📅</span>
-              <span>10th - 11th May 2025</span>
+              <span>17th - 18th May 2025</span>
               
             </div>
-            <div className="event-type">24 Hour Hackathon</div>
+            <div className="event-type">24-hour national level hackathon</div>
           </div>
 
           <div
@@ -172,7 +172,7 @@ function Landing() {
           <span> Brought to you by </span>
           <h2>Dayananda Sagar College of Engineering</h2>
           <h3>Department of Artificial Intelligence & Machine Learning</h3>
-          <h3 style={{color:"white"}}>In Colabration with Techmiya Solution</h3>
+          <h3 style={{color:"white"}}>In Collaboration with Techmiya Solution</h3>
         </div>
       </div>
 
