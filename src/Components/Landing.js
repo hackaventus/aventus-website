@@ -75,7 +75,7 @@ function Landing() {
             <div className="coming-soon-badge">Coming Soon</div>
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
-                where technology flourishes
+              Where AI Thrives and Technology Flourishes.
               </p>
               <p className="hashtag" data-aos="fade-up" data-aos-delay="600">
                 #wtf

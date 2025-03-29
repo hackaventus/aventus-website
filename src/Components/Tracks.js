@@ -18,28 +18,26 @@ const Tracks = () => {
     {
       title: "AI in Healthcare",
       description:
-        "Revolutionize healthcare with AI! Develop smart diagnostics, predictive analytics, and AI-powered solutions to enhance patient care, medical research, and disease prevention in this transformative hackathon.",
+        "Can AI be a doctor’s best assistant? Think big—early disease detection, virtual consultations that feel real or AI predicting life-threatening conditions before they happen. If you could build something that truly transforms healthcare, what would it be?",
       color: "#06b81bcc", // Reduced green intensity
       icon: "fas fa-heartbeat",
     },
     {
       title: "AI in Cyber Security",
       description:
-        "Defend the digital world with AI! Build intelligent threat detection, automated security solutions, and real-time cyber defense systems to combat evolving cyber threats in this high-impact hackathon.",
+        "What if security was smarter, faster and always one step ahead? Imagine AI-powered systems detecting threats in real time, stopping cyberattacks before they happen and adapting on the fly—no delays, no vulnerabilities. The future of cybersecurity isn’t reactive—it’s proactive. How would you build it?",
       color: "#059b15cc", // Reduced green intensity
       icon: "fas fa-shield-alt",
     },
     {
       title: "AI in Edge Computing",
       description:
-        "Unleash the power of AI at the edge! Build low-latency, high-efficiency AI solutions for real-time processing in IoT, smart devices, and autonomous systems at this cutting-edge hackathon.",
-      color: "#068f17cc", // Reduced green intensity
-      icon: "fas fa-microchip",
+        "What if AI could process data instantly, right where it’s created? No cloud delays—just real-time automation, AI-powered smart devices and ultra-fast decision-making at the source. How will you build the future of edge intelligence? "
     },
     {
       title: "AI in Defense and Disaster Response",
       description:
-        "Harness the power of AI to revolutionize defense and disaster response! Build cutting-edge solutions for threat detection, crisis management, and emergency response in this high-impact hackathon.",
+        "How can AI act fast in crisis situations? Whether it’s predicting disasters, coordinating rescue missions, or making split-second decisions, AI has the power to save lives when every second counts. What will you build to make a difference? ",
       color: "#06a819cc", // Reduced green intensity
       icon: "fas fa-fighter-jet",
     },
@@ -70,7 +68,8 @@ const Tracks = () => {
                   borderTop: `1px solid ${track.color}20`,
                   borderRight: `1px solid ${track.color}20`,
                   borderBottom: `1px solid ${track.color}20`,
-                  padding: "32px", // Increased padding
+                  padding: "32px",
+                     // Increased padding
                 }}
               >
                 <div className="track-background"></div>
