@@ -93,7 +93,7 @@ function Landing() {
               <span>10th - 11th May 2025</span>
               
             </div>
-            <div className="event-type">24 Hour Hackathon</div>
+            <div className="event-type">24-hour national level hackathon</div>
           </div>
 
           <div
