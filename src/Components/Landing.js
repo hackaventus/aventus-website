@@ -172,7 +172,7 @@ function Landing() {
           <span> Brought to you by </span>
           <h2>Dayananda Sagar College of Engineering</h2>
           <h3>Department of Artificial Intelligence & Machine Learning</h3>
-          <h3 style={{color:"white"}}>In Colabration with Techmiya Solution</h3>
+          <h3 style={{color:"white"}}>In Collaboration with Techmiya Solution</h3>
         </div>
       </div>
 
