@@ -18,28 +18,28 @@ const Tracks = () => {
     {
       title: "AI in Healthcare",
       description:
-        "Can AI be the doctor's best assistant? Build something that transforms healthcare—be it early diagnosis, virtual consultations, or life-saving predictions!",
+        "Revolutionize healthcare with AI! Develop smart diagnostics, predictive analytics, and AI-powered solutions to enhance patient care, medical research, and disease prevention in this transformative hackathon.",
       color: "#06b81bcc", // Reduced green intensity
       icon: "fas fa-heartbeat",
     },
     {
       title: "AI in Cyber Security",
       description:
-        "What if intelligence lived right at the source? Think AI-powered smart devices, real-time automation, or ultra-fast decision-making—without waiting on the cloud!",
+        "Defend the digital world with AI! Build intelligent threat detection, automated security solutions, and real-time cyber defense systems to combat evolving cyber threats in this high-impact hackathon.",
       color: "#059b15cc", // Reduced green intensity
       icon: "fas fa-shield-alt",
     },
     {
       title: "AI in Edge Computing",
       description:
-        "Can AI outsmart hackers? Create a next-gen security solution that detects, prevents, or even predicts cyber threats before they strike!",
+        "Unleash the power of AI at the edge! Build low-latency, high-efficiency AI solutions for real-time processing in IoT, smart devices, and autonomous systems at this cutting-edge hackathon.",
       color: "#068f17cc", // Reduced green intensity
       icon: "fas fa-microchip",
     },
     {
       title: "AI in Defense and Disaster Response",
       description:
-        "How can AI be a first responder? From disaster predictions to AI-powered rescue missions, build something that saves lives when it matters most!",
+        "Harness the power of AI to revolutionize defense and disaster response! Build cutting-edge solutions for threat detection, crisis management, and emergency response in this high-impact hackathon.",
       color: "#06a819cc", // Reduced green intensity
       icon: "fas fa-fighter-jet",
     },
