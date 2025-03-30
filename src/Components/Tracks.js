@@ -81,7 +81,6 @@ const Tracks = () => {
                       className={track.icon}
                       style={{
                         fontSize: "4.5rem", // Slightly reduced size
-                        color: track.color,
                         filter:
                           track.icon === "fas fa-fighter-jet"
                             ? "brightness(1.2)"
