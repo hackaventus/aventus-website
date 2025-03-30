@@ -12,7 +12,7 @@ const TeamLayout = () => {
     { id: 1, name: "kajal", role: "marketing", image: "kajal.JPG" },
     { id: 2, name: "prateeka", role: "design ", image: "prateeka.JPG" },
     { id: 3, name: "manjunatha", role: "logistics", image: "manju.JPG" },
-    {id: 4, name: "gurunathagouda", role: "tech", image: "guru.JPG"},
+    {id: 4, name: "gurunatha", role: "tech", image: "guru.JPG"},
     { id: 5, name: "shrihari", role: "media", image: "shrihari.JPG" },
     { id: 6, name: "chetan", role: "tech", image: "chetan.JPG" },
   ];
