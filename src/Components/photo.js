@@ -9,16 +9,16 @@ const TeamLayout = () => {
   ];
 
   const coreMembers = [
-    { id: 1, name: "kajal", role: "sponsorship & marketing", image: "kajal.jpg" },
-    { id: 2, name: "prateeka", role: "design ", image: "prateeka.jpg" },
-    { id: 3, name: "manjunatha", role: "logestics", image: "manju.jpg" },
-    { id: 4, name: "shrihari", role: "media", image: "shrihari.jpg" },
-    { id: 5, name: "chetan", role: "tech", image: "chetan.jpg" },
-    { id: 6, name: "gurunathagouda", role: "tech", image: "guru.jpg" }
+    { id: 1, name: "kajal", role: "sponsorship & marketing", image: "kajal.JPG" },
+    { id: 2, name: "prateeka", role: "design ", image: "prateeka.JPG" },
+    { id: 3, name: "manjunatha", role: "logestics", image: "manju.JPG" },
+    { id: 4, name: "shrihari", role: "media", image: "shrihari.JPG" },
+    { id: 5, name: "chetan", role: "tech", image: "chetan.JPG" },
+    { id: 6, name: "gurunathagouda", role: "tech", image: "guru.JPG" }
   ];
   const groupPhotos = [
-    { id: 1, caption: " Leads", image: "lead2.jpg" },
-    { id: 2, caption: "Members", image: "tcc.jpg" }
+    { id: 1, caption: " Leads", image: "lead2.JPG" },
+    { id: 2, caption: "Members", image: "tcc.JPG" }
   ];
 
   return (
