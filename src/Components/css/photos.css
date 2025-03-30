@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.hod-container, .core-members-container {
+.hod-container {
   display: flex;
   justify-content: center;
   gap: 20rem;
@@ -18,7 +18,7 @@
 .core-members-container{
    display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 4rem;
   width: 100%;
   align-items: center;
   flex-wrap: wrap; 

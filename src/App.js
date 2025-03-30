@@ -51,10 +51,9 @@ function MainContent() {
           <Glimpse images={images} />
         </div>
         <Faqs />
-        <div style={{ padding: "20px" }}>
+        <div style={{alignItems:"center", display:"flex", flexDirection:"column"}}>
           <Photo/>
-          
-                    </div>
+           </div>
         <div className="contact-map-container">
           <div className="contact-section">
             <ContactUs />
