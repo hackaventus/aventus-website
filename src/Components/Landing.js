@@ -61,7 +61,7 @@ function Landing() {
   }, []);
 
   return (
-    <div id="landing-main" data-section-name="s-one">
+    <div id="landing-main"  style={{background:"transparent"}} data-section-name="s-one">
       {/* Added a navbar-spacer div */}
       {/* <div className="navbar-spacer"></div> */}
 

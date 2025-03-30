@@ -13,9 +13,11 @@
 .conta {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+	background: transparent;
 }
 
 .conta {
+	
 	height: 100%;
 	overflow-y: auto;
 	overscroll-behavior-y: contain;
@@ -116,5 +118,6 @@ html {
 		height: 97vh;
 		border-radius: 20px;
 		position: fixed;
+		background: transparent;
 	}
 }
