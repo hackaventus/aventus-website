@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import './css/faqs.css';
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const navigate = useNavigate();
 
   const faqs = [
     {
@@ -11,7 +13,7 @@ const Faqs = () => {
     },
     {
       question: "When is the event?",
-      answer: "The event will be held on May 10-11, 2024."
+      answer: "The event will be held on May 17-18, 2024."
     },
     {
       question: "Who can participate?",
@@ -21,11 +23,16 @@ const Faqs = () => {
       question: "What is the prize pool?",
       answer: "The total prize pool for Aventus 3.0 is ₹2.5 Lakhs."
     },
-    // Add more FAQs as needed
+    
+ 
   ];
 
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const handleMoreClick = () => {
+    navigate('/more-faqs'); // Navigate to the More FAQs page this will route to more faqs page bro
   };
 
   return (
@@ -45,9 +52,10 @@ const Faqs = () => {
             </div>
           ))}
         </div>
+        <button className="more-button" onClick={handleMoreClick}>More</button>
       </div>
     </div>
   );
 };
 
-export default Faqs; 
+export default Faqs;
