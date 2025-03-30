@@ -12,8 +12,8 @@
   --glass-effect: blur(12px);
   --transition-speed: 0.3s;
   --shadow-glow: 0px 0px 20px rgba(8, 218, 34, 0.3);
-  --font-heading: 'Architype Van';
-  --font-body:'Architype Van';
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Mont", "Montserrat", sans-serif;
   --navbar-height: 70px;
 }
 
@@ -129,7 +129,6 @@
 }
 
 .event-title .accent {
-  font-family: var(--font-heading);
   font-size: 5.5rem;
   display: inline-block;
   color: var(--primary-color);
@@ -139,7 +138,6 @@
 }
 
 .coming-soon-badge {
-  font-family: var(--font-heading);
   display: inline-block;
   background: rgba(8, 218, 34, 0.1);
   color: var(--primary-color);
@@ -156,7 +154,7 @@
 }
 
 .tagline p {
-  font-family: var(--font-heading);
+  font-family: var(--font-accent);
   font-size: 1.5rem;
   font-weight: 300;
   margin: 0.5rem 0;
@@ -176,13 +174,14 @@
 .event-details {
   margin-bottom: 2.5rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 .date-badge {
-  font-family: var(--font-heading);
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2rem;
@@ -206,7 +205,6 @@
 }
 
 .event-type {
-  font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -267,7 +265,6 @@
 
 .social-container {
   display: flex;
-  font-family: var(--font-heading);
   flex-direction: column;
   align-items: center;
 }
@@ -361,7 +358,6 @@
 
 .presented-content {
   position: relative;
-  font-family: var(--font-body);
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
@@ -388,8 +384,8 @@
 .presented-content span {
   font-size: 1.2rem;
   opacity: 0.9;
-  font-family: 'Architype Van';
-  font-style: 'Architype Van';
+  font-family: var(--font-accent);
+  font-style: italic;
   color: var(--accent-color);
   display: block;
   margin-bottom: 0.5rem;

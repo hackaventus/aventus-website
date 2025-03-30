@@ -12,6 +12,7 @@ import image3 from "./images/3.png";
 import image4 from "./images/4.png";
 import image5 from "./images/5.png";
 import "./App.css";
+import Photo from "./Components/photo.js";
 import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
@@ -40,7 +41,7 @@ function MainContent() {
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
-        // <Tracks />
+         <Tracks />
         <Sponsors />
 
         <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -50,6 +51,10 @@ function MainContent() {
           <Glimpse images={images} />
         </div>
         <Faqs />
+        <div style={{ padding: "20px" }}>
+          <Photo/>
+          
+                    </div>
         <div className="contact-map-container">
           <div className="contact-section">
             <ContactUs />

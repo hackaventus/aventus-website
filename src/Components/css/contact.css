@@ -1,13 +1,4 @@
-.contact-section {
-  padding: 2.5rem;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 1rem;
-  min-height: 100vh; /* Ensures it takes full height */
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centers content */
-  flex-direction: column; /* Stacks items vertically */
-}
+
 
 .contact-content {
   width: 100%; /* Responsive width */
@@ -153,12 +144,9 @@ background: linear-gradient(45deg, #0088cc, #229ED9);
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 1.5rem;
-  }
 
   .contact-content {
-    width: 95%;
+    width: 100%;
     padding: 1.5rem;
   }
 
@@ -179,6 +167,34 @@ background: linear-gradient(45deg, #0088cc, #229ED9);
   .social-link {
     width: 3rem;
     height: 3rem;
+    font-size: 1rem;
+  }
+}
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+
+  .contact-content {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contact-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+    text-align: center;
+    flex-direction: column; /* Stack items in small screens */
+  }
+
+  .social-links {
+    gap: 0.8rem; /* Reduce spacing */
+  }
+
+  .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
     font-size: 1rem;
   }
 }
