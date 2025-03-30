@@ -10,10 +10,18 @@
 .hod-container, .core-members-container {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 20rem;
   width: 100%;
   align-items: center;
   flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+.core-members-container{
+   display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap; 
 }
 
 .hod, .core-member {
