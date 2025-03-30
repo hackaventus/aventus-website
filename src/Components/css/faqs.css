@@ -9,7 +9,7 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-   padding: 1rem; /*added a bit of padding bro */
+  padding:1rem; /* added padding bro */
 }
 
 .faqs-content h2 {
@@ -34,7 +34,7 @@
 }
 
 .faq-question {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,7 +89,6 @@
 @media (max-width: 480px) {
   .faqs-content h2 {
     font-size: 1.8rem;
-    padding:2rem;
   }
 
   .faq-question {
