@@ -178,11 +178,11 @@
 @media (max-width: 480px) {
   .container {
     padding: 16px 8px;
-    gap: 16px;
+    gap: 2px;
   }
   
   .hod-container, .core-members-container {
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: space-around;
   }
   
