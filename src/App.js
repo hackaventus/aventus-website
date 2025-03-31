@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Landing from "./Components/Landing";
 // import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
@@ -51,10 +51,10 @@ function MainContent() {
           <Glimpse images={images} />
         </div>
         <Faqs />
-        <div style={{ padding: "20px" }}>
+        <div style={{ display: "flex", alignItems:"center", flexDirection: "column"}}>
           <Photo/>
           
-                    </div>
+                   </div>
         <div className="contact-map-container">
           <div className="contact-section">
             <ContactUs />
@@ -88,5 +88,4 @@ function App() {
 }
 
 export default App;
-
 
