@@ -66,7 +66,6 @@ function Landing() {
       {/* <div className="navbar-spacer"></div> */}
 
       <div className="lcontent" style={{ background: "transparent" }}>
-
         <div className="lleft" data-aos="fade-right" data-aos-delay="200">
           <div className="event-title">
             <h1>
@@ -105,6 +104,7 @@ function Landing() {
               className="apply-button"
               data-hackathon-slug="aventus-3-0"
               data-button-theme="dark"
+              style={{ height: "44px", width: "300px" }}
             ></div>
           </div>
         </div>
@@ -172,7 +172,9 @@ function Landing() {
           <span> Brought to you by </span>
           <h2>Dayananda Sagar College of Engineering</h2>
           <h3>Department of Artificial Intelligence & Machine Learning</h3>
-          <h3 style={{color:"white"}}>In Collaboration with Techmiya Solution</h3>
+          <h3 style={{ color: "white" }}>
+            In Colabration with Techmiya Solution
+          </h3>
         </div>
       </div>
 
