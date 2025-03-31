@@ -10,7 +10,7 @@ import {
 
 const ContactUs = () => {
   return (
-    <div className="contact-section">
+   
       <div className="contact-content">
         <h2 style={{ color: "#2ecc71" }}>Contact Us</h2>
         <div className="contact-info">
@@ -60,7 +60,7 @@ const ContactUs = () => {
           </a>
         </div>
       </div>
-    </div>
+   
   );
 };
 

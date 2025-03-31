@@ -174,12 +174,14 @@
 .event-details {
   margin-bottom: 2.5rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 .date-badge {
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2rem;
@@ -435,6 +437,15 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  #landing-main {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    background:transparent;
+    padding: 2rem 0;
+  }
   .lcontent {
     width: 90%;
     background: transparent;
@@ -508,6 +519,10 @@
 }
 
 @media (max-width: 480px) {
+  #landing-main {
+   background: transparent;
+    padding: 1rem 0;
+  }
   .lcontent {
     background: transparent;
     width: 95%;
