@@ -83,7 +83,7 @@
   line-height: 1.6;
 }
 
- .more-button { /*added the more button for the faq's bro */
+ .more-btn , .less-btn{ /*added the more button for the faq's bro */
   margin-top: 2rem;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -96,7 +96,7 @@
   transition: all 0.3s ease;
 }
 
-.more-button:hover {
+.more-btn,.less-btn:hover {
   background: var(--accent-color);
 }
 

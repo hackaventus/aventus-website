@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Landing from "./Components/Landing";
+// import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
 import Tracks from "./Components/Tracks";
 import About from "./Components/About";
@@ -17,48 +18,53 @@ import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
 import NewAventusLanding from "./Components/NewAventusLanding";
-import MoreFaqs from "./Components/MoreFaqs";
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
 
   useEffect(() => {
+    // Hide cursor on load
     document.body.style.cursor = "default";
 
     return () => {
-      document.body.style.cursor = "default"; 
+      document.body.style.cursor = "default"; // Reset cursor on unmount
     };
   }, []);
 
   return (
-    <div className="conta" style={{ background: "transparent" }}>
-      <Landing />
-      <About />
-      <div className="individual" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}></div>
-      <div style={{ padding: "20px" }}>
-        <IndividualSponsor images={images} />
-      </div>
-      <Tracks />
-      <Sponsors />
-      <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <h1>Winners of Aventus 2.0</h1>
-      </div>
-      <div style={{ padding: "20px" }}>
-        <Glimpse images={images} />
-      </div>
-      <Faqs />
-      <div style={{ padding: "20px" }}>
-        <Photo />
-      </div>
-      <div className="contact-map-container">
-        <div className="contact-section">
-          <ContactUs />
+    <>
+      <div className="conta" style={{ background: "transparent" }}>
+        <Landing />
+        <About />
+        <div className="individual" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         </div>
-        <div className="map">
-          <Map />
+        <div style={{ padding: "20px" }}>
+          <IndividualSponsor images={images} />
+        </div>
+         <Tracks />
+        <Sponsors />
+
+        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h1>Winners of Aventus 2.0</h1>
+        </div>
+        <div style={{ padding: "20px" }}>
+          <Glimpse images={images} />
+        </div>
+        <Faqs />
+        <div style={{ padding: "20px" }}>
+          <Photo/>
+          
+                    </div>
+        <div className="contact-map-container">
+          <div className="contact-section">
+            <ContactUs />
+          </div>
+          <div className="map">
+            <Map />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -66,6 +72,7 @@ function App() {
   const [showMainContent, setShowMainContent] = useState(false);
 
   useEffect(() => {
+    // Auto-switch to main content after 5 seconds
     const timer = setTimeout(() => {
       setShowMainContent(true);
     }, 3000);
@@ -75,14 +82,10 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={!showMainContent ? <NewAventusLanding /> : <MainContent />} />
-        {/* added routes to handle the more faqs components bro */}
-        <Route path="/more-faqs" element={<MoreFaqs />} />
-
-      </Routes>
+      {!showMainContent ? <NewAventusLanding /> : <MainContent />}
     </Router>
   );
 }
 
 export default App;
+
