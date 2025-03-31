@@ -89,15 +89,22 @@
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background: var(--primary-color);
+  background: green;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.more-btn{
+  background: green;
+}
 
-.more-btn,.less-btn:hover {
-  background: var(--accent-color);
+.more-btn:hover{
+  background: rgb(1, 176, 1);
+}
+
+.less-btn:hover{
+  background: rgb(1, 176, 1);
 }
 
 @media (max-width: 768px) {
@@ -105,12 +112,19 @@
     font-size: 0.9rem;
     padding: 0.7rem 1.3rem;
   }
+  .more-btn, .less-btn:hover{
+    background: rgb(1, 176, 1);
+  }
 }
 
 @media (max-width: 480px) {
   .more-button {
     font-size: 0.85rem;
     padding: 0.6rem 1.2rem;
+
+  }
+  .more-btn, .less-btn:hover{
+    background: rgb(1, 176, 1);
   }
 }
 
@@ -123,6 +137,10 @@
 
   .faq-question h3 {
     font-size: 1.1rem;
+    text-align: left;
+  }
+  .faq-answer{
+    text-align: left;
   }
 }
 
@@ -133,14 +151,17 @@
 
   .faq-question {
     padding: 1.2rem;
+    text-align: left;
   }
 
   .faq-question h3 {
     font-size: 1rem;
+    text-align: left;
   }
 
   .faq-answer p {
     padding: 1.2rem;
     font-size: 0.9rem;
+    text-align: left;
   }
 } 

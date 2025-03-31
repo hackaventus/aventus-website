@@ -5,7 +5,10 @@
   padding: 0px;
   gap: 24px;
   width: 100%;
+  max-width: 2000px; 
+  margin: 0 auto;
 }
+
 
 .hod-container {
   display: flex;
