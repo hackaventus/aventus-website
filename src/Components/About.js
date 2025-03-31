@@ -28,12 +28,12 @@ export default function About() {
             <h1>About Aventus 3.0</h1>
             <p>
               {" "}
-              a 24-hour hackathon hosted by Department of Artificial
+              A 24-hour hackathon hosted by Department of Artificial
               Intelligence & Machine Learning, Dayananda Sagar College of
               Engineering.
             </p>
             <p>
-              Set to take place on the 10th and 11th of May, this offline event
+              Set to take place on the 17th and 18th of May, this offline event
               aims to bring together a diverse group of college students to
               create groundbreaking solutions and drive progress in technology
               and society.
