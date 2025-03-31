@@ -3,7 +3,7 @@
     width: 100%;  /* Full width for responsiveness */
     max-width: 480px; /* Matches Contact Us box */
     height: 480px; /* Adjust height dynamically */
-    padding: 25px;
+    padding: 2rem;
     border: 3px solid #2ecc71; /* Neon green border */
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.5); /* Dark background */
@@ -49,10 +49,10 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .venue-container {
         max-width: 100%; /* Allow full width on smaller screens */
-        padding: 15px;
+        padding: 1.5rem;
     }
 
     .venue-container iframe {

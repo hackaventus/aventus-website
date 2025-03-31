@@ -61,7 +61,7 @@ function Landing() {
   }, []);
 
   return (
-    <div id="landing-main" data-section-name="s-one">
+    <div id="landing-main"  style={{background:"transparent"}} data-section-name="s-one">
       {/* Added a navbar-spacer div */}
       {/* <div className="navbar-spacer"></div> */}
 
@@ -74,7 +74,7 @@ function Landing() {
             <div className="coming-soon-badge">Coming Soon</div>
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
-                where technology flourishes
+              Where AI Thrives and Technology Flourishes.
               </p>
               <p className="hashtag" data-aos="fade-up" data-aos-delay="600">
                 #wtf
@@ -89,9 +89,10 @@ function Landing() {
           >
             <div className="date-badge">
               <span className="date-icon">📅</span>
-              <span>10th - 11th May 2025</span>
+              <span>17th - 18th May 2025</span>
+              
             </div>
-            <div className="event-type">24 Hour Hackathon</div>
+            <div className="event-type">24-hour national level hackathon</div>
           </div>
 
           <div

@@ -18,28 +18,28 @@ const Tracks = () => {
     {
       title: "AI in Healthcare",
       description:
-        "Can AI be the doctor's best assistant? Build something that transforms healthcare—be it early diagnosis, virtual consultations, or life-saving predictions!",
+        "Can AI be a doctor’s best assistant? Think big—early disease detection, virtual consultations that feel real or AI predicting life-threatening conditions before they happen. If you could build something that truly transforms healthcare, what would it be?",
       color: "#06b81bcc", // Reduced green intensity
       icon: "fas fa-heartbeat",
     },
     {
       title: "AI in Cyber Security",
       description:
-        "What if intelligence lived right at the source? Think AI-powered smart devices, real-time automation, or ultra-fast decision-making—without waiting on the cloud!",
+        "What if security was smarter, faster and always one step ahead? Imagine AI-powered systems detecting threats in real time, stopping cyberattacks before they happen and adapting on the fly—no delays, no vulnerabilities. The future of cybersecurity isn’t reactive—it’s proactive. How would you build it?",
       color: "#059b15cc", // Reduced green intensity
       icon: "fas fa-shield-alt",
     },
     {
       title: "AI in Edge Computing",
       description:
-        "Can AI outsmart hackers? Create a next-gen security solution that detects, prevents, or even predicts cyber threats before they strike!",
-      color: "#068f17cc", // Reduced green intensity
-      icon: "fas fa-microchip",
+        "What if AI could process data instantly, right where it’s created? No cloud delays—just real-time automation, AI-powered smart devices and ultra-fast decision-making at the source. How will you build the future of edge intelligence? ",
+      color: "#028a15cc", // Slightly deeper green for a professional look
+      icon: "fas fa-microchip"
     },
     {
       title: "AI in Defense and Disaster Response",
       description:
-        "How can AI be a first responder? From disaster predictions to AI-powered rescue missions, build something that saves lives when it matters most!",
+        "How can AI act fast in crisis situations? Whether it’s predicting disasters, coordinating rescue missions, or making split-second decisions, AI has the power to save lives when every second counts. What will you build to make a difference? ",
       color: "#06a819cc", // Reduced green intensity
       icon: "fas fa-fighter-jet",
     },
@@ -70,7 +70,8 @@ const Tracks = () => {
                   borderTop: `1px solid ${track.color}20`,
                   borderRight: `1px solid ${track.color}20`,
                   borderBottom: `1px solid ${track.color}20`,
-                  padding: "32px", // Increased padding
+                  padding: "32px",
+                     // Increased padding
                 }}
               >
                 <div className="track-background"></div>

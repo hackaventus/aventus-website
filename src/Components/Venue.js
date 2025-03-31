@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/venue.css';
+import './css/map.css';
 
 
 const Venue = () => {
