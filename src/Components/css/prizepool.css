@@ -24,7 +24,7 @@
 
 .prize-pool-container {
   width: 100%;
-  max-width: 1200px; /* Increased width further */
+  max-width: 1200px;
   perspective: 1000px;
   position: relative;
   z-index: 1;
@@ -258,6 +258,9 @@
   border: 1px solid rgba(0, 255, 0, 0.1);
   transition: all 0.3s ease;
   min-width: 200px;
+  /* Added flex basis to maintain consistent sizing */
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: calc(33.333% - 2rem);
 }
 
 .feature-item:hover {
@@ -326,12 +329,54 @@
 .prize-note p {
   margin: 0.5rem 0;
 }
+@media (max-width: 992px) {
+  .feature-item {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
 
-/* Update mobile responsiveness */
 @media (max-width: 768px) {
+  .prize-pool-section {
+    padding: 2rem 1rem;
+  }
+  
+  .prize-pool-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .prize-pool-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .currency {
+    font-size: 2.5rem;
+  }
+  
+  .amount {
+    font-size: 3.5rem;
+  }
+  
+  .lakhs {
+    font-size: 1.5rem;
+  }
+  
+  .prize-amount {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
   .main-desc {
-    font-size: 1.2rem;
-    padding: 0 1rem;
+    font-size: 1.1rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
   }
 
   .prize-features {
@@ -339,15 +384,81 @@
   }
 
   .feature-item {
-    padding: 1rem;
-    min-width: 150px;
+    padding: 1rem 1.5rem;
+    min-width: unset;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-text {
+    font-size: 1rem;
   }
 
   .additional-perks {
     padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .additional-perks h3 {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
   }
 
   .additional-perks ul {
     grid-template-columns: 1fr;
   }
-} 
+  
+  .additional-perks li {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+  }
+  
+  .detail-item {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+  
+  .position, .value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prize-pool-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .currency {
+    font-size: 2rem;
+  }
+  
+  .amount {
+    font-size: 2.5rem;
+  }
+  
+  .lakhs {
+    font-size: 1.25rem;
+  }
+  
+  .prize-amount {
+    padding: 1rem;
+  }
+  
+  .main-desc {
+    font-size: 1rem;
+  }
+  
+  .feature-item {
+    padding: 0.75rem 1rem;
+  }
+}
