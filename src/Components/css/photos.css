@@ -1,10 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
   padding: 0px;
-  gap: 24px;
-  width: 100%;
+  gap: 70px;
+  width: 100vw;
 }
 
 .hod-container {
@@ -18,7 +20,7 @@
 .core-members-container{
    display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
   align-items: center;
   flex-wrap: wrap; 
@@ -121,10 +123,12 @@
 
 .section-title {
   color: #08da22;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 1rem;
   width: 100%;
+  font-family: 'OmegaFlight';
+
 }
 
 .member-info {
@@ -146,20 +150,31 @@
 }
 
 /* Media queries with improved mobile alignment */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .container {
+    padding: 7px 4px;
+    gap: 1px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
   .hod {
     width: 220px;
     height: 220px;
+    align-items: center;
+    gap: 1px;
   }
   
   .core-member {
     width: 150px;
     height: 150px;
+    align-items: center;
   }
   
   .core-members {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    align-items: center;
   }
   
   .group-photo {
@@ -179,11 +194,14 @@
   .container {
     padding: 16px 8px;
     gap: 2px;
+    width: 100%;
+    align-items: center;
   }
   
   .hod-container, .core-members-container {
     gap: 1rem;
     justify-content: space-around;
+    align-items: center;
   }
   
   .hod {

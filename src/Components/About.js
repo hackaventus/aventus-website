@@ -28,30 +28,29 @@ export default function About() {
             <h1>About Aventus 3.0</h1>
             <p>
               {" "}
-              a 24-hour hackathon hosted by Department of Artificial
-              Intelligence & Machine Learning, Dayananda Sagar College of
-              Engineering.
+              A 24-hour hackathon hosted by the Department of AI & ML, Dayananda Sagar 
+               College of Engineering where bold ideas meet cutting-edge technology.
             </p>
             <p>
-              Set to take place on the 10th and 11th of May, this offline event
-              aims to bring together a diverse group of college students to
-              create groundbreaking solutions and drive progress in technology
-              and society.
+            On May 17th and 18th, step into a high-energy offline challenge where innovation 
+            isn’t just encouraged, it’s expected! 
             </p>
             <p>
-              With four exciting tracks to choose from—AI & ML, IoT, Cyber
-              Security and Open innovation will have the opportunity to
-              collaborate, learn, and showcase their skills in front of esteemed
-              judges.
+            Choose your battlefield: AI in Healthcare, AI in Cybersecurity, AI in Edge 
+            Computing, or AI in Defense & Disaster Response—four tracks, endless possibilities.
             </p>
             <p>
               Join us at Aventus as we foster innovation, nurture talent, and
               redefine the future of technology together. Register now and be a
               part of this incredible journey!
             </p>
+            <p>Code, create and compete as you collaborate with brilliant minds and pitch game
+            changing solutions to industry experts.</p>
+            <p>This isn’t just a hackathon. It’s a launchpad for the future. Register now and be part of 
+            the AI revolution! </p>
             <p>
               <strong>
-              Build a better future with Aventus, Where Technology Flourishes.
+              Build a better future with Aventus,Where AI Thrives and Technology Flourishes.
               </strong>
             </p>
           </div>

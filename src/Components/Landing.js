@@ -103,7 +103,7 @@ function Landing() {
             <div
               className="apply-button"
               data-hackathon-slug="aventus-3-0"
-              data-button-theme="dark"
+              data-button-theme="light"
               style={{ height: "44px", width: "300px" }}
             ></div>
           </div>
@@ -173,7 +173,7 @@ function Landing() {
           <h2>Dayananda Sagar College of Engineering</h2>
           <h3>Department of Artificial Intelligence & Machine Learning</h3>
           <h3 style={{ color: "white" }}>
-            In Colabration with Techmiya Solution
+            In Collaboration with Techmiya Solution
           </h3>
         </div>
       </div>
