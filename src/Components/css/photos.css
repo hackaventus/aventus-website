@@ -1,10 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
   padding: 0px;
-  gap: 24px;
-  width: 100%;
+  gap: 12px;
+  width: 100vw;
 }
 
 .hod-container {
@@ -147,19 +149,29 @@
 
 /* Media queries with improved mobile alignment */
 @media (max-width: 768px) {
+  .container {
+    padding: 16px 8px;
+    gap: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
   .hod {
     width: 220px;
     height: 220px;
+    align-items: center;
   }
   
   .core-member {
     width: 150px;
     height: 150px;
+    align-items: center;
   }
   
   .core-members {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    align-items: center;
   }
   
   .group-photo {
@@ -179,11 +191,14 @@
   .container {
     padding: 16px 8px;
     gap: 2px;
+    width: 100%;
+    align-items: center;
   }
   
   .hod-container, .core-members-container {
     gap: 1rem;
     justify-content: space-around;
+    align-items: center;
   }
   
   .hod {
