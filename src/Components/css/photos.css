@@ -5,9 +5,12 @@
   align-content: center;
   align-items: center;
   padding: 0px;
-  gap: 70px;
-  width: 100vw;
+  gap: 24px;
+  width: 100%;
+  max-width: 2000px; 
+  margin: 0 auto;
 }
+
 
 .hod-container {
   display: flex;
