@@ -16,7 +16,7 @@
 }
 
 .glimpse h1 {
-  color: #f0f0f0;
+  color: var(--primary-color);
   font-size: 2.5rem;
   align-items: center;
   text-align: center;

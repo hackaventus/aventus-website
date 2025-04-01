@@ -103,8 +103,8 @@
   background: rgb(1, 176, 1);
 }
 
-.less-btn:hover{
-  background: rgb(1, 176, 1);
+.more-btn:hover,.less-btn:hover {
+  background: var(--accent-color);
 }
 
 @media (max-width: 768px) {

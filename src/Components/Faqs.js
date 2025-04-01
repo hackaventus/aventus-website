@@ -12,7 +12,7 @@ const Faqs = () => {
     },
     {
       question: "When is the event?",
-      answer: "The event will be held on May 10-11, 2024."
+      answer: "The event will be held on May 17-18, 2025."
     },
     {
       question: "Who can participate?",
@@ -20,7 +20,7 @@ const Faqs = () => {
     },
     {
       question: "What is the prize pool?",
-      answer: "The total prize pool for Aventus 3.0 is ₹2.5 Lakhs."
+      answer: "The total prize pool for Aventus 3.0 is ₹3.0 Lakhs."
     },
   ];
 
