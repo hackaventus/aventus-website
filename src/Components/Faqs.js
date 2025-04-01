@@ -27,7 +27,7 @@ const Faqs = () => {
   const hiddenFaqs = [
     {
       question: "Is it a remote or an on-site Hackathon?",
-      answer: "AVENTUS 3.0 ‘25 is a hybrid hackathon, where the preliminary round will be conducted completely online. The Main Hackathon will be conducted on 17th and 18th May 2025 at the Artificial Intelligence and Machine Learning department of Dayananda Sagar College of Engineering, Bengaluru."
+      answer: " The Aventus 3.0 Hackathon is an in-person event hosted at Dayananda Sagar College of Engineering. "
     },
     {
       question: "Will meals be provided during the event?",

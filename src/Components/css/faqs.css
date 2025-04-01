@@ -26,6 +26,10 @@
   gap: 1rem;
 }
 
+.faqs-list + .faqs-list {
+  margin-top: 1rem;
+}
+
 .faq-item {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
