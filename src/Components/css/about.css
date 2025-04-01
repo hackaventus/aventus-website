@@ -68,7 +68,7 @@
 
 .cele span {
     font-size: larger;
-    color: rgb(0, 190, 102);
+    color: var(--primary-color);
     letter-spacing: 2px;
 }
 
@@ -76,7 +76,7 @@
     width: 20%;
     font-size: x-large;
     margin-right: 2rem;
-    color: rgb(0, 190, 102);
+    color: var(--primary-color);
     display: grid;
     place-items: center;
     text-align: center;
@@ -224,7 +224,7 @@
         display: flex;
         align-items: center;
         text-align: center;
-        color: rgb(0, 190, 102);
+        color: var(--primary-color);
         margin: 0;
     }
     .time{
