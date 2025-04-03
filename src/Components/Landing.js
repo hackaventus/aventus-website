@@ -65,6 +65,7 @@ function Landing() {
     script.src = "https://apply.devfolio.co/v2/sdk.js";
     script.async = true;
     script.defer = true;
+    script.crossOrigin = "anonymous";
     document.body.appendChild(script);
     return () => {
       document.body.removeChild(script);
