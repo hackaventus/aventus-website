@@ -44,7 +44,7 @@ function MainContent() {
          <Tracks />
         <Sponsors />
 
-        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div className="glimpse">
           <h1>Winners of Aventus 2.0</h1>
         </div>
         <div style={{ padding: "20px" }}>

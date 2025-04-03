@@ -8,7 +8,7 @@ const NewAventusLanding = () => {
         <img
           src="aventus.gif"
           alt="Aventus Animation"
-          className="w-full h-auto hover:scale-105 transition-transform duration-300"
+          className="w-full h-auto bg-transparent transition-transform duration-300"
         />
       </div>
 
