@@ -103,7 +103,7 @@ function Landing() {
             <div
               className="apply-button"
               data-hackathon-slug="aventus-3-0"
-              data-button-theme="dark"
+              data-button-theme="light"
               style={{ height: "44px", width: "300px" }}
             ></div>
           </div>

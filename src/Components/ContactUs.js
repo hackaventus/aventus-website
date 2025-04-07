@@ -12,7 +12,7 @@ const ContactUs = () => {
   return (
    
       <div className="contact-content">
-        <h2 style={{ color: "#2ecc71" }}>Contact Us</h2>
+        <h2>Contact Us</h2>
         <div className="contact-info">
           <div className="contact-item">
             <i className="fas fa-envelope"></i>
