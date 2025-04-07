@@ -47,21 +47,36 @@ function Landing() {
     window.addEventListener("resize", handleResize);
 
     // Devfolio script
+    // const script = document.createElement("script");
+    // script.src = "https://apply.devfolio.co/v2/sdk.js";
+    // script.async = true;
+    // script.defer = true;
+    // document.body.appendChild(script);
+
+    // return () => {
+    //   document.body.removeChild(script);
+    //   window.removeEventListener("resize", handleResize);
+    //   effect.remove();
+    // };
+  }, []);
+
+  useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://apply.devfolio.co/v2/sdk.js";
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
-
     return () => {
       document.body.removeChild(script);
-      window.removeEventListener("resize", handleResize);
-      effect.remove();
     };
   }, []);
 
   return (
-    <div id="landing-main"  style={{background:"transparent"}} data-section-name="s-one">
+    <div
+      id="landing-main"
+      style={{ background: "transparent" }}
+      data-section-name="s-one"
+    >
       {/* Added a navbar-spacer div */}
       {/* <div className="navbar-spacer"></div> */}
 
@@ -74,7 +89,7 @@ function Landing() {
             <div className="coming-soon-badge">Coming Soon</div>
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
-              Where AI Thrives and Technology Flourishes.
+                Where AI Thrives and Technology Flourishes.
               </p>
               <p className="hashtag" data-aos="fade-up" data-aos-delay="600">
                 #wtf
@@ -90,7 +105,6 @@ function Landing() {
             <div className="date-badge">
               <span className="date-icon">📅</span>
               <span>17th - 18th May 2025</span>
-              
             </div>
             <div className="event-type">24-hour national level hackathon</div>
           </div>
@@ -100,12 +114,14 @@ function Landing() {
             data-aos="fade-up"
             data-aos-delay="1000"
           >
-            <div
-              className="apply-button"
-              data-hackathon-slug="aventus-3-0"
-              data-button-theme="light"
-              style={{ height: "44px", width: "300px" }}
-            ></div>
+            <div className="devbtn">
+              <div
+                className="apply-button"
+                data-hackathon-slug="aventus-3"
+                data-button-theme="light"
+                style={{ height: "44px", width: "300px" }}
+              ></div>
+            </div>
           </div>
         </div>
 
