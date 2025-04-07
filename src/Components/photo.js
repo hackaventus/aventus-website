@@ -14,7 +14,7 @@ const TeamLayout = () => {
     { id: 3, name: "manjunatha", role: "logistics", image: "manju.JPG" },
     {id: 4, name: "gurunatha", role: "tech", image: "guru.JPG"},
     { id: 5, name: "shrihari", role: "media", image: "shrihari.JPG" },
-    { id: 6, name: "chetan", role: "tech", image: "chetan.JPG" },
+    { id: 6, name: "chetan", role: "tech", image: "chetan.jpg" },
   ];
   const groupPhotos = [
     { id: 1, caption: " Leads", image: "lead2.JPG" },

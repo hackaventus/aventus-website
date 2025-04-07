@@ -26,6 +26,10 @@
   gap: 1rem;
 }
 
+.faqs-list + .faqs-list {
+  margin-top: 1rem;
+}
+
 .faq-item {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -95,6 +99,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.more-btn{
+  background: green;
+}
+
+.more-btn:hover{
+  background: rgb(1, 176, 1);
+}
 
 .more-btn:hover,.less-btn:hover {
   background: var(--accent-color);
@@ -105,12 +116,19 @@
     font-size: 0.9rem;
     padding: 0.7rem 1.3rem;
   }
+  .more-btn, .less-btn:hover{
+    background: rgb(1, 176, 1);
+  }
 }
 
 @media (max-width: 480px) {
   .more-button {
     font-size: 0.85rem;
     padding: 0.6rem 1.2rem;
+
+  }
+  .more-btn, .less-btn:hover{
+    background: rgb(1, 176, 1);
   }
 }
 
@@ -123,6 +141,10 @@
 
   .faq-question h3 {
     font-size: 1.1rem;
+    text-align: left;
+  }
+  .faq-answer{
+    text-align: left;
   }
 }
 
@@ -133,14 +155,17 @@
 
   .faq-question {
     padding: 1.2rem;
+    text-align: left;
   }
 
   .faq-question h3 {
     font-size: 1rem;
+    text-align: left;
   }
 
   .faq-answer p {
     padding: 1.2rem;
     font-size: 0.9rem;
+    text-align: left;
   }
 } 
