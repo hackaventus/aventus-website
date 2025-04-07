@@ -115,14 +115,16 @@ function Landing() {
             data-aos="fade-up"
             data-aos-delay="1000"
           >
+
             <div className="devbtn">
               <div
                 className="apply-button"
-                data-hackathon-slug="aventus-3"
+                data-hackathon-slug="aventus-3-0"
                 data-button-theme="light"
                 style={{ height: "44px", width: "300px" }}
               ></div>
             </div>
+
           </div>
         </div>
 
