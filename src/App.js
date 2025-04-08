@@ -18,6 +18,7 @@ import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
 import NewAventusLanding from "./Components/NewAventusLanding";
+import EventSchedule from "./Components/EventSchedule.js";
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
@@ -51,7 +52,14 @@ function MainContent() {
         </div>
         <Sponsors />
 
-        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div
+          className="glimpse"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <h1>Winners of Aventus 2.0</h1>
         </div>
         <div style={{ padding: "20px" }}>
