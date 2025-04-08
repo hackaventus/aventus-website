@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Landing from "./Components/Landing";
 // import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
 import Tracks from "./Components/Tracks";
+import ProblemStatements from "./Components/ProblemStatements";
 import About from "./Components/About";
 import Glimpse from "./Components/Glimpse";
 import image1 from "./images/1.png";
@@ -34,6 +37,7 @@ function MainContent() {
 
   return (
     <>
+      <ToastContainer />
       <div className="conta" style={{ background: "transparent" }}>
         <Landing />
         <About />
@@ -47,6 +51,7 @@ function MainContent() {
         ></div>
 
         <Tracks />
+        <ProblemStatements />
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
