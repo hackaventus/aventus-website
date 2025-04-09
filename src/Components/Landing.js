@@ -86,7 +86,9 @@ function Landing() {
             <h1>
               AVENTUS<span className="accent">3.0</span>
             </h1>
-            <div className="coming-soon-badge">Coming Soon</div>
+            <a href="https://aventus-3.devfolio.co" target="_blank" rel="noopener noreferrer">
+            <button class="cta-button">Apply Now on Devfolio</button>
+            </a>
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
                 Where AI Thrives and Technology Flourishes.
