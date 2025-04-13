@@ -131,10 +131,10 @@ ${track}
   };
 
   const trackColors = {
-    "AI in Healthcare": "#06b81bcc",
-    "AI in Cyber Security": "#059b15cc",
-    "AI in Edge Computing": "#06b81bcc",
-    "AI in Defense and Disaster Response": "#059b15cc",
+    "AI in Healthcare": "#06b81b",
+    "AI in Cyber Security": "#06b81b",
+    "AI in Edge Computing": "#06b81b",
+    "AI in Defense and Disaster Response": "#06b81b",
   };
 
   const renderTrackButton = (track) => {
@@ -200,7 +200,7 @@ ${track}
     <section id="ProblemStatements" style={{ padding: "60px 0" }}>
       <div className="container text-center mb-5">
         <h2 className="section-title">
-          <span className="highlight">Problem Statements</span>
+          <span className="">Problem Statements</span>
         </h2>
         <div className="section-underline"></div>
         <div
