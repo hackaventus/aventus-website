@@ -34,7 +34,7 @@ const Tracks = () => {
       description:
         "What if AI could process data instantly, right where it’s created? No cloud delays—just real-time automation, AI-powered smart devices and ultra-fast decision-making at the source. How will you build the future of edge intelligence? ",
       color: "#028a15cc", // Slightly deeper green for a professional look
-      icon: "fas fa-microchip"
+      icon: "fas fa-microchip",
     },
     {
       title: "AI in Defense and Disaster Response",
@@ -71,7 +71,7 @@ const Tracks = () => {
                   borderRight: `1px solid ${track.color}20`,
                   borderBottom: `1px solid ${track.color}20`,
                   padding: "32px",
-                     // Increased padding
+                  // Increased padding
                 }}
               >
                 <div className="track-background"></div>
