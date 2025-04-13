@@ -31,6 +31,16 @@ function MainContent() {
     // Hide cursor on load
     document.body.style.cursor = "default";
 
+    // Handle direct navigation to problem statements via URL hash
+    if (window.location.hash === "#ProblemStatements") {
+      const element = document.getElementById("ProblemStatements");
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+
     return () => {
       document.body.style.cursor = "default"; // Reset cursor on unmount
     };
@@ -50,10 +60,8 @@ function MainContent() {
             alignItems: "center",
           }}
         ></div>
-
         <Tracks />
         <ProblemStatements />
-
         <div>
           <PrizePool />
         </div>
@@ -62,7 +70,6 @@ function MainContent() {
           <IndividualSponsor images={images} />
         </div>
         <Sponsors />
-
         <div
           className="glimpse"
           style={{
