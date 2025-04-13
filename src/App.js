@@ -22,6 +22,7 @@ import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
 import NewAventusLanding from "./Components/NewAventusLanding";
 import EventSchedule from "./Components/EventSchedule.js";
+import PrizePodium from "./Components/PrizePodiumdesc.js";
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
@@ -52,6 +53,7 @@ function MainContent() {
 
         <Tracks />
         <ProblemStatements />
+        <PrizePodium/>  
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
