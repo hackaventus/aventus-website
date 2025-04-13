@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Landing from "./Components/Landing";
 // import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
@@ -23,6 +23,8 @@ import ContactUs from "./Components/ContactUs";
 import NewAventusLanding from "./Components/NewAventusLanding";
 import EventSchedule from "./Components/EventSchedule.js";
 import PrizePodium from "./Components/PrizePodiumdesc.js";
+import PrizePool from "./Components/PrizePool";
+
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
@@ -30,6 +32,16 @@ function MainContent() {
   useEffect(() => {
     // Hide cursor on load
     document.body.style.cursor = "default";
+
+    // Handle direct navigation to problem statements via URL hash
+    if (window.location.hash === "#ProblemStatements") {
+      const element = document.getElementById("ProblemStatements");
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
 
     return () => {
       document.body.style.cursor = "default"; // Reset cursor on unmount
@@ -50,21 +62,26 @@ function MainContent() {
             alignItems: "center",
           }}
         ></div>
-
         <Tracks />
         <ProblemStatements />
         <PrizePodium/>  
+        <div>
+          <PrizePool />
+        </div>
+        <EventSchedule />
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
         <Sponsors />
-
-        <EventSchedule />
-        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-
-
-     
-         <h1>Winners of Aventus 2.0</h1>
+        <div
+          className="glimpse"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <h1>Winners of Aventus 2.0</h1>
         </div>
         <div style={{ padding: "20px" }}>
           <Glimpse images={images} />
