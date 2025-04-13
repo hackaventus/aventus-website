@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./css/landing.css";
-import PrizePool from "./PrizePool";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -87,8 +86,37 @@ function Landing() {
             <h1>
               AVENTUS<span className="accent">3.0</span>
             </h1>
-            <a href="https://aventus-3.devfolio.co" target="_blank" rel="noopener noreferrer">
-            <button class="cta-button">Apply Now on Devfolio</button>
+            <a
+              alignContent="center"
+              alignItems="center"
+              href="https://aventus-3.devfolio.co"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                className="cta-button"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "8px",
+                  padding: "10px 20px",
+                  margin: "0 auto", // Add this to center the button itself
+                  width: "fit-content", // Add this to ensure proper width
+                }}
+              >
+                <img
+                  src="devolio.svg"
+                  alt="Devfolio logo"
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    objectFit: "contain",
+                    marginBottom: "1px", // Small adjustment to optically align with text
+                  }}
+                />
+                Apply Now on Devfolio
+              </button>
             </a>
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
@@ -117,7 +145,6 @@ function Landing() {
             data-aos="fade-up"
             data-aos-delay="1000"
           >
-
             <div className="devbtn">
               <div
                 className="apply-button"
@@ -126,7 +153,6 @@ function Landing() {
                 style={{ height: "44px", width: "300px" }}
               ></div>
             </div>
-
           </div>
         </div>
 
@@ -197,10 +223,6 @@ function Landing() {
             In Collaboration with Techmiya Solution
           </h3>
         </div>
-      </div>
-
-      <div>
-        <PrizePool />
       </div>
     </div>
   );
