@@ -51,7 +51,7 @@ const Tracks = () => {
       <div className="tracks">
         <div className="container text-center mb-5">
           <h2 className="section-title">
-            Hackathon <span className="highlight">Tracks</span>
+            <span className="">Hackathon Tracks</span>
           </h2>
           <div className="section-underline"></div>
           <p className="section-description">

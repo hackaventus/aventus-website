@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Landing from "./Components/Landing";
 // import Landing2 from "./Components/AventusLanding.js";
 import Sponsors from "./Components/Sponsors";
@@ -22,6 +22,7 @@ import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
 import NewAventusLanding from "./Components/NewAventusLanding";
 import EventSchedule from "./Components/EventSchedule.js";
+import PrizePool from "./Components/PrizePool";
 
 function MainContent() {
   const images = [image1, image2, image3, image4, image5];
@@ -52,17 +53,25 @@ function MainContent() {
 
         <Tracks />
         <ProblemStatements />
+
+        <div>
+          <PrizePool />
+        </div>
+        <EventSchedule />
         <div style={{ padding: "20px" }}>
           <IndividualSponsor images={images} />
         </div>
         <Sponsors />
 
-        <EventSchedule />
-        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-
-
-     
-         <h1>Winners of Aventus 2.0</h1>
+        <div
+          className="glimpse"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <h1>Winners of Aventus 2.0</h1>
         </div>
         <div style={{ padding: "20px" }}>
           <Glimpse images={images} />

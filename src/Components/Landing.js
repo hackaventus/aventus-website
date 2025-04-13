@@ -86,8 +86,12 @@ function Landing() {
             <h1>
               AVENTUS<span className="accent">3.0</span>
             </h1>
-            <a href="https://aventus-3.devfolio.co" target="_blank" rel="noopener noreferrer">
-            <button class="cta-button">Apply Now on Devfolio</button>
+            <a
+              href="https://aventus-3.devfolio.co"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button class="cta-button">Apply Now on Devfolio</button>
             </a>
             <div className="tagline">
               <p data-aos="fade-up" data-aos-delay="400">
@@ -116,7 +120,6 @@ function Landing() {
             data-aos="fade-up"
             data-aos-delay="1000"
           >
-
             <div className="devbtn">
               <div
                 className="apply-button"
@@ -125,7 +128,6 @@ function Landing() {
                 style={{ height: "44px", width: "300px" }}
               ></div>
             </div>
-
           </div>
         </div>
 
@@ -196,10 +198,6 @@ function Landing() {
             In Collaboration with Techmiya Solution
           </h3>
         </div>
-      </div>
-
-      <div>
-        <PrizePool />
       </div>
     </div>
   );
