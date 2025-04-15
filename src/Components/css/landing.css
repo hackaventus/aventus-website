@@ -137,18 +137,6 @@
   position: relative;
 }
 
-.coming-soon-badge {
-  display: inline-block;
-  background: rgba(8, 218, 34, 0.1);
-  color: var(--primary-color);
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 1rem 0;
-  border: 2px solid var(--primary-color);
-}
-
 .tagline {
   margin: 1.5rem 0 2.5rem;
 }
@@ -582,5 +570,25 @@
   position: relative;
   background: transparent;
   z-index: 1;
+}
+
+/* Basic button styling */
+.devfolio-button button, .cta-button {
+  display: inline-block;
+  background: rgba(8, 218, 34, 0.1);
+  color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  border: 2px solid var(--primary-color);
+}
+
+.devfolio-button button:hover, .cta-button:hover {
+  border-color: #08da22; 
+  box-shadow: 0 0 15px rgba(8, 218, 34, 0.5); 
+  transform: translateY(-2px); 
+  background: rgba(8, 218, 34, 0.2);
 }
 
