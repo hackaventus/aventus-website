@@ -377,13 +377,14 @@ ${track}
                     <p
                       style={{
                         marginBottom: "10px",
-                        fontSize: "1.1rem",
+                        fontFamily:"consolas",
+                        fontSize: "1rem",
                         color: "#ffffff",
                       }}
                     >
                       {ps.description}
                     </p>
-                    <p style={{ fontSize: "0.9rem", color: "#cccccc" }}>
+                    <p style={{ fontSize: "0.9rem",fontFamily:"consolas", color: "#cccccc" }}>
                       <strong style={{ color: "#ffffff" }}>Feasibility:</strong>{" "}
                       {ps.feasibility}
                     </p>

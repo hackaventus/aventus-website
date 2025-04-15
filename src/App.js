@@ -72,17 +72,11 @@ function MainContent() {
           <IndividualSponsor images={images} />
         </div>
         <Sponsors />
-        <div
-          className="glimpse"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div className="glimpse" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h1>Winners of Aventus 2.0</h1>
         </div>
         <div style={{ padding: "20px" }}>
+        
           <Glimpse images={images} />
         </div>
         <Faqs />
