@@ -15,12 +15,12 @@
   }
   
   .section-title,
-  .section-subtitle {
+  .section-subtitle ,.section-title-1{
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   
-  .section-title {
+  .section-title,.section-title-1 {
     font-family: 'OmegaFlight', sans-serif;
   }
   
@@ -106,6 +106,16 @@
     word-break: break-word;
   }
   
+  .section-title-1 {
+    color: #08da22;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: 'OmegaFlight';
+    margin-top: 3rem;
+  
+  }
   .shine-icon {
     position: relative;
     overflow: hidden;
@@ -138,7 +148,7 @@
     align-items: flex-end;
     flex-wrap: wrap;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   
   .podium-row .special-card {
@@ -211,7 +221,7 @@
   
   @media (max-width: 1024px) {
     .specials {
-      gap: 4rem;
+      gap: 3rem;
     }
   
     .emoji-wrapper {
@@ -277,15 +287,40 @@
     .emoji {
       font-size: clamp(1.1rem, 2vw, 1.8rem);
     }
+
+    .specials .section-title-1{
+      margin-bottom: -3rem;
+    }
   }
   
-  @media (min-width: 1280px) {
+  @media (min-width: 750px) and (max-width:1000px) {
+    
+    .specials .special-card {
+      width: 260px;
+      height: 400px;
+  }
+
+  
+
+    
+    
+  }
+  
+  @media (max-width: 768px) {
+    .specials {
+      gap: 3rem;
+    }
+  
+    .special-card {
+      width: 90%;
+    }
+  
     .emoji-wrapper {
       max-width: 60px;
     }
   
     .emoji {
-      font-size: clamp(1rem, 1.8vw, 1.5rem);
+      font-size: clamp(1.3rem, 5vw, 2.2rem);
     }
   }
   
