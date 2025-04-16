@@ -81,7 +81,7 @@ export default function PrizePodium() {
 
   return (
     <div className="prize-wrapper">
-      <h2 className="section-title">Special Category Awards</h2>
+      <h2 className="section-title">Prize Podium</h2>
 
       <div className="podium-row">
         {podium.map((prize, index) => (
@@ -105,6 +105,7 @@ export default function PrizePodium() {
       </div>
 
       <div className="specials" ref={specialsRef}>
+      <h2 className="section-title-1">Special Category Awards</h2>
         {specialPrizes.map((prize, index) => (
           <div
             key={prize.title}
