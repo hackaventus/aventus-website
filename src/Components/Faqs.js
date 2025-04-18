@@ -114,7 +114,13 @@ const Faqs = () => {
           <button
             className="more-btn"
             onClick={() => setShowMore(true)}
-            style={{ textAlign: "left" }}
+            style={{
+              textAlign: "center",
+              marginTop: "20px",
+              borderRadius: "5px",
+              display: "block",
+              margin: "0 auto",
+            }}
           >
             More ▼
           </button>
