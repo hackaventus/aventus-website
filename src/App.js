@@ -20,7 +20,7 @@ import Map from "./Components/map.js";
 import IndividualSponsor from "./Components/Individualsponsors.js";
 import Faqs from "./Components/Faqs";
 import ContactUs from "./Components/ContactUs";
-import NewAventusLanding from "./Components/NewAventusLanding";
+import NewAventusLanding from "./Components/AventusLanding";
 import EventSchedule from "./Components/EventSchedule.js";
 import PrizePool from "./Components/PrizePool";
 import PrizePodium from "./Components/PrizePodiumdesc.js";
